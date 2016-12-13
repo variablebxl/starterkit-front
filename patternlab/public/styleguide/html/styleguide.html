@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1481635793" media="all" />
-    <link rel="preload" href="../../../../dist/fonts.min.css?1481635793" as="style" />
-    <link rel="stylesheet" href="../../../../dist/screen.css?1481635793">
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1481644040" media="all" />
+    <link rel="preload" href="../../../../dist/fonts.min.css?1481644040" as="style" />
+    <link rel="stylesheet" href="../../../../dist/screen.css?1481644040">
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     <!-- never cache patterns -->
@@ -17,8 +17,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1481635793" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1481635793" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1481644040" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1481644040" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -40,7 +40,7 @@
 </div>                        <div id="elements-buttons" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-00-buttons/00-elements-00-global-00-buttons.html" class="patternLink" data-patternpartial="elements-buttons" title="Link to Pattern">
+      <a href="../../patterns/00-elements-00-global-buttons/00-elements-00-global-buttons.html" class="patternLink" data-patternpartial="elements-buttons" title="Link to Pattern">
         buttons
         
               </a>
@@ -58,20 +58,22 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-elements-buttons"></div>
     
   <div class="sg-pattern-example">
-    <p><a href="#" class="btn">Button</a></p>
-<p><a href="#" class="btn alt">Alternate Button</a></p>
-<p><a href="#" class="btn disabled">Disabled Button</a></p>
-<p><a href="#" class="text-btn">Text Button</a></p>
+    <p><a href="#" class="button">Button</a></p>
+<p><a href="#" class="button button--alt">Alternate Button</a></p>
+<p><a href="#" class="button button--disabled">Disabled Button</a></p>
+<p><a href="#" class="text-button">Text Button</a></p>
+<p><a href="#" class="text-button text-button--disabled">Disabled text Button</a></p>
+
   </div>
   
   <script type="text/json" id="sg-pattern-data-elements-buttons" class="sg-pattern-data">
     {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"buttons","patternPartial":"elements-buttons","patternState":""}
   </script>
-</div><!--end .sg-pattern-->                        <div id="elements-colors" class="sg-pattern">
+</div><!--end .sg-pattern-->                        <div id="elements-definition" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-00-colors/00-elements-00-global-00-colors.html" class="patternLink" data-patternpartial="elements-colors" title="Link to Pattern">
-        colors
+      <a href="../../patterns/00-elements-00-global-definition/00-elements-00-global-definition.html" class="patternLink" data-patternpartial="elements-definition" title="Link to Pattern">
+        definition
         
               </a>
     </h3>
@@ -80,61 +82,65 @@
       
     </div>
     
-    <a href="#" data-patternpartial="elements-colors" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-colors" class="sg-pattern-extra-toggle">
+    <a href="#" data-patternpartial="elements-definition" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-definition" class="sg-pattern-extra-toggle">
       <span>&#9660;</span>
     </a>
   </div>
   
-  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-colors"></div>
+  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-definition"></div>
     
   <div class="sg-pattern-example">
-    <ul class="sg-colors">
-	<li>
-		<span class="sg-swatch" style="background: #ff0000;"></span>
-		<span class="sg-label">#ff0000</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #00ff00;"></span>
-		<span class="sg-label">#00ff00</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #0000ff;"></span>
-		<span class="sg-label">#0000ff</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #ffff00;"></span>
-		<span class="sg-label">#ffff00</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #00ffff;"></span>
-		<span class="sg-label">#00ffff</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #ff00ff;"></span>
-		<span class="sg-label">#ff00ff</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #ffffff;"></span>
-		<span class="sg-label">#ffffff</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #808080;"></span>
-		<span class="sg-label">#808080</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #000000;"></span>
-		<span class="sg-label">#000000</span>
-	</li>
-</ul>
+    <dl>
+	<dt>Definition List</dt>
+	<dd>A number of connected items or names written or printed consecutively, typically one below the other.</dd>
+    <dt>This is a term.</dt>
+    <dd>This is the definition of that term, which both live in a <code>dl</code>.</dd>
+    <dt>Here is another term.</dt>
+    <dd>And it gets a definition too, which is this line.</dd>
+    <dt>Here is term that shares a definition with the term below.</dt>
+    <dd>And it gets a definition too, which is this line.</dd>
+</dl>
+
   </div>
   
-  <script type="text/json" id="sg-pattern-data-elements-colors" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"colors","patternPartial":"elements-colors","patternState":""}
+  <script type="text/json" id="sg-pattern-data-elements-definition" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"definition","patternPartial":"elements-definition","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="elements-fonts" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/00-elements-00-global-fonts/00-elements-00-global-fonts.html" class="patternLink" data-patternpartial="elements-fonts" title="Link to Pattern">
+        fonts
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="elements-fonts" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-fonts" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-fonts"></div>
+    
+  <div class="sg-pattern-example">
+    <p>Primary font: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</p>
+<p><em>Primary font italic: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</em></p>
+<p><strong>Primary font bold: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</strong></p>
+<p><em><strong>Primary font bold italic: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</strong></em></p>
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-elements-fonts" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"fonts","patternPartial":"elements-fonts","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="elements-headings" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-00-headings/00-elements-00-global-00-headings.html" class="patternLink" data-patternpartial="elements-headings" title="Link to Pattern">
+      <a href="../../patterns/00-elements-00-global-headings/00-elements-00-global-headings.html" class="patternLink" data-patternpartial="elements-headings" title="Link to Pattern">
         headings
         
               </a>
@@ -163,263 +169,10 @@
   <script type="text/json" id="sg-pattern-data-elements-headings" class="sg-pattern-data">
     {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"headings","patternPartial":"elements-headings","patternState":""}
   </script>
-</div><!--end .sg-pattern-->                        <div id="elements-table" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-00-table/00-elements-00-global-00-table.html" class="patternLink" data-patternpartial="elements-table" title="Link to Pattern">
-        table
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="elements-table" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-table" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-table"></div>
-    
-  <div class="sg-pattern-example">
-    <table>
-	<thead>
-		<tr>
-			<th>Table Heading 1</th>
-			<th>Table Heading 2</th>
-			<th>Table Heading 3</th>
-			<th>Table Heading 4</th>
-			<th>Table Heading 5</th>
-		</tr>
-	</thead>
-	<tfoot>
-		<tr>
-			<th>Table Footer 1</th>
-			<th>Table Footer 2</th>
-			<th>Table Footer 3</th>
-			<th>Table Footer 4</th>
-			<th>Table Footer 5</th>
-		</tr>
-	</tfoot>
-	<tbody>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	<tr>
-		<td>Table Cell 1</td>
-		<td>Table Cell 2</td>
-		<td>Table Cell 3</td>
-		<td>Table Cell 4</td>
-		<td>Table Cell 5</td>
-	</tr>
-	</tbody>
-</table>
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-elements-table" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"table","patternPartial":"elements-table","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="elements-unordered" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-00-unordered/00-elements-00-global-00-unordered.html" class="patternLink" data-patternpartial="elements-unordered" title="Link to Pattern">
-        unordered
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="elements-unordered" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-unordered" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-unordered"></div>
-    
-  <div class="sg-pattern-example">
-    <div class="text">
-	<ul>
-		<li>This is a list item in an unordered list</li>
-		<li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line. </li>
-		<li>
-			Lists can be nested inside of each other
-			<ul>
-				<li>This is a nested list item</li>
-				<li>This is another nested list item in an unordered list</li>
-			</ul>
-		</li>
-		<li>This is the last list item</li>
-	</ul>
-</div>
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-elements-unordered" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"unordered","patternPartial":"elements-unordered","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="elements-fonts" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-01-fonts/00-elements-00-global-01-fonts.html" class="patternLink" data-patternpartial="elements-fonts" title="Link to Pattern">
-        fonts
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="elements-fonts" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-fonts" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-fonts"></div>
-    
-  <div class="sg-pattern-example">
-    <p>Primary font: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</p>
-<p><em>Primary font italic: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</em></p>
-<p><strong>Primary font bold: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</strong></p>
-<p class="font-secondary">Secondary font: Georgia, Times, "Times New Roman", serif;</p>
-<p class="font-secondary"><em>Secondary font italic: Georgia, Times, "Times New Roman", serif;</em></p>
-<p class="font-secondary"><strong>Secondary font bold; Georgia, Times, "Times New Roman", serif;</strong></p>
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-elements-fonts" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"fonts","patternPartial":"elements-fonts","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="elements-ordered" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-01-ordered/00-elements-00-global-01-ordered.html" class="patternLink" data-patternpartial="elements-ordered" title="Link to Pattern">
-        ordered
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="elements-ordered" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-ordered" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-ordered"></div>
-    
-  <div class="sg-pattern-example">
-    <div class="text">
-	<ol>
-		<li>This is a list item in an ordered list</li>
-		<li>An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.</li>
-		<li>
-			Lists can be nested inside of each other
-			<ol>
-				<li>This is a nested list item</li>
-				<li>This is another nested list item in an ordered list</li>
-			</ol>
-		</li>
-		<li>This is the last list item</li>
-	</ol>
-</div>
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-elements-ordered" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"ordered","patternPartial":"elements-ordered","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="elements-animations" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-02-animations/00-elements-00-global-02-animations.html" class="patternLink" data-patternpartial="elements-animations" title="Link to Pattern">
-        animations
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="elements-animations" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-animations" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-animations"></div>
-    
-  <div class="sg-pattern-example">
-    <div class="demo-animate animate-fade"><strong>Fade:</strong> Duration: 0.3s Easing: ease-out (Hover to see effect)</div>
-
-<div class="demo-animate animate-move"><div class="demo-shape"></div><strong>Movement:</strong> Duration: 0.8s  Easing: ease-in-out; (Hover to see effect)</div>
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-elements-animations" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"animations","patternPartial":"elements-animations","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="elements-definition" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-02-definition/00-elements-00-global-02-definition.html" class="patternLink" data-patternpartial="elements-definition" title="Link to Pattern">
-        definition
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="elements-definition" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-definition" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-definition"></div>
-    
-  <div class="sg-pattern-example">
-    <dl>
-	<dt>Definition List</dt>
-	<dd>A number of connected items or names written or printed consecutively, typically one below the other.</dd>
-    <dt>This is a term.</dt>
-    <dd>This is the definition of that term, which both live in a <code>dl</code>.</dd>
-    <dt>Here is another term.</dt>
-    <dd>And it gets a definition too, which is this line.</dd>
-    <dt>Here is term that shares a definition with the term below.</dt>
-    <dd>And it gets a definition too, which is this line.</dd>
-</dl>
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-elements-definition" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"definition","patternPartial":"elements-definition","patternState":""}
-  </script>
 </div><!--end .sg-pattern-->                        <div id="elements-inline-elements" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-03-inline-elements/00-elements-00-global-03-inline-elements.html" class="patternLink" data-patternpartial="elements-inline-elements" title="Link to Pattern">
+      <a href="../../patterns/00-elements-00-global-inline-elements/00-elements-00-global-inline-elements.html" class="patternLink" data-patternpartial="elements-inline-elements" title="Link to Pattern">
         inline elements
         
               </a>
@@ -483,10 +236,171 @@
   <script type="text/json" id="sg-pattern-data-elements-inline-elements" class="sg-pattern-data">
     {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"inline elements","patternPartial":"elements-inline-elements","patternState":""}
   </script>
+</div><!--end .sg-pattern-->                        <div id="elements-ordered" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/00-elements-00-global-ordered/00-elements-00-global-ordered.html" class="patternLink" data-patternpartial="elements-ordered" title="Link to Pattern">
+        ordered
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="elements-ordered" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-ordered" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-ordered"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="content">
+	<ol>
+		<li>This is a list item in an ordered list</li>
+		<li>An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.</li>
+		<li>
+			Lists can be nested inside of each other
+			<ol>
+				<li>This is a nested list item</li>
+				<li>This is another nested list item in an ordered list</li>
+			</ol>
+		</li>
+		<li>This is the last list item</li>
+	</ol>
+</div>
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-elements-ordered" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"ordered","patternPartial":"elements-ordered","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="elements-table" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/00-elements-00-global-table/00-elements-00-global-table.html" class="patternLink" data-patternpartial="elements-table" title="Link to Pattern">
+        table
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="elements-table" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-table" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-table"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="content">
+	<table>
+		<thead>
+			<tr>
+				<th>Table Heading 1</th>
+				<th>Table Heading 2</th>
+				<th>Table Heading 3</th>
+				<th>Table Heading 4</th>
+				<th>Table Heading 5</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>Table Footer 1</th>
+				<th>Table Footer 2</th>
+				<th>Table Footer 3</th>
+				<th>Table Footer 4</th>
+				<th>Table Footer 5</th>
+			</tr>
+		</tfoot>
+		<tbody>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+			<td>Table Cell 4</td>
+			<td>Table Cell 5</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+			<td>Table Cell 4</td>
+			<td>Table Cell 5</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+			<td>Table Cell 4</td>
+			<td>Table Cell 5</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+			<td>Table Cell 4</td>
+			<td>Table Cell 5</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-elements-table" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"table","patternPartial":"elements-table","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="elements-unordered" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/00-elements-00-global-unordered/00-elements-00-global-unordered.html" class="patternLink" data-patternpartial="elements-unordered" title="Link to Pattern">
+        unordered
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="elements-unordered" title="View Pattern Info" id="sg-pattern-extra-toggle-elements-unordered" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-elements-unordered"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="content">
+	<ul>
+		<li>This is a list item in an unordered list</li>
+		<li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line. </li>
+		<li>
+			Lists can be nested inside of each other
+			<ul>
+				<li>This is a nested list item</li>
+				<li>This is another nested list item in an unordered list</li>
+			</ul>
+		</li>
+		<li>This is the last list item</li>
+	</ul>
+</div>
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-elements-unordered" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"elements","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"unordered","patternPartial":"elements-unordered","patternState":""}
+  </script>
 </div><!--end .sg-pattern-->                        <div id="elements-visibility" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-elements-00-global-03-visibility/00-elements-00-global-03-visibility.html" class="patternLink" data-patternpartial="elements-visibility" title="Link to Pattern">
+      <a href="../../patterns/00-elements-00-global-visibility/00-elements-00-global-visibility.html" class="patternLink" data-patternpartial="elements-visibility" title="Link to Pattern">
         visibility
         
               </a>
@@ -504,17 +418,18 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-elements-visibility"></div>
     
   <div class="sg-pattern-example">
-    <p class="hide-small">This text is hidden on smaller screens</p>
+    <p class="hide-xs">This text is hidden on smaller screens</p>
 
-<p class="hide-med hide-large"><em>This text is only visible on smaller screens</em></p>
+<p class="hide-md hide-lg"><em>This text is only visible on smaller screens</em></p>
 
-<p class="hide-med">This text is hidden on medium screens only</p>
+<p class="hide-md">This text is hidden on medium screens only</p>
 
-<p class="hide-small hide-large"><em>This text is only visible on medium screens</em></p>
+<p class="hide-xs hide-sm hide-lg"><em>This text is only visible on medium screens</em></p>
 
-<p class="hide-large">This text is hidden on large screens</p>
+<p class="hide-lg">This text is hidden on large screens</p>
 
-<p class="hide-small hide-med"><em>This text is only visible on large screens</em></p>
+<p class="hide-xs hide-sm hide-md"><em>This text is only visible on large screens</em></p>
+
   </div>
   
   <script type="text/json" id="sg-pattern-data-elements-visibility" class="sg-pattern-data">
@@ -559,10 +474,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1481635793">
+<script id="pl-js-polyfill-insert-1481644040">
   (function() {
     if (self != top) {
-      var cb = '1481635793';
+      var cb = '1481644040';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -572,10 +487,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1481635793">
+<script id="pl-js-insert-1481644040">
   (function() {
     if (self != top) {
-      var cb = '1481635793';
+      var cb = '1481644040';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }

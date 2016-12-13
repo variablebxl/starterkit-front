@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 
-@import "partials/_normalize.scss";
+@import "partials/_reset.scss";
 @import "partials/_variables.scss";
 @import "partials/_mixins.scss";
 @import "partials/_grid-settings.scss";
@@ -21,7 +21,7 @@
 
 
 @import "modules/elements/_buttons.scss";
-
+@import "modules/elements/_images.scss";
 
 
 /*------------------------------------*\

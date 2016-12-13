@@ -40,6 +40,7 @@ $font-size-sm      : 16px;
 $font-size-md      : 18px;
 $font-size-lg      : 20px;
 $font-size-xl      : 28px;
+$font-size-xxl     : 36px;
 
 //** Unit-less `line-height`
 $line-height          : 1.6;
@@ -96,6 +97,13 @@ $font-sizes-xl: (
   lg   : ($font-size-xl * $font-res-ratio, $line-height),
 );
 
+$font-sizes-xxl: (
+  null : ($font-size-xxl / ($font-res-ratio * $font-res-ratio), $line-height),
+  sm   : ($font-size-xxl / $font-res-ratio, $line-height),
+  md   : ($font-size-xxl, $line-height),
+  lg   : ($font-size-xxl * $font-res-ratio, $line-height),
+);
+
 
 
 /*------------------------------------*\
@@ -104,18 +112,18 @@ $font-sizes-xl: (
 
 
 h1 {
-  @include font-size($font-sizes-xl);
+  @include font-size($font-sizes-xxl);
 }
 
 h2 {
   @include font-size($font-sizes-xl);
 }
 
-h3,
-h4 {
+h3 {
   @include font-size($font-sizes-lg);
 }
 
+h4,
 h5,
 h6 {
   @include font-size($font-sizes-md);
@@ -197,7 +205,7 @@ p cite {
 }
 
 p mark {
-  background-color: rgba($blue, .4);
+  background-color: rgba($action, .2);
   color: $base-color;
 }
 
@@ -222,22 +230,6 @@ hr {
 figcaption {
   @include font-size($font-sizes-sm);
   @include margin-top($spacing-xs-responsive);
-}
-
-dl {
-  dt {
-    @include font-size($font-sizes-sm);
-    @include margin-bottom($spacing-xs-responsive);
-    &:first-of-type{
-      @include padding-top($spacing-sm-responsive);
-      border-top: $border-width-sm $base-color solid;
-    }
-  }
-  dd{
-    padding-bottom: $spacing-sm;
-    margin-bottom: $spacing-sm;
-    border-bottom: $border-width-sm $base-color solid;
-  }
 }
 
 ol, ul, pre, dl {
@@ -267,4 +259,116 @@ li {
 }
 input, textarea, label, select {
   line-height: $line-height-form
+}
+
+/*------------------------------------*\
+  #DEFINITIONS
+\*------------------------------------*/
+
+
+dl {
+  @include font-size($font-sizes-sm);
+  dt {
+    @extend .font-body-bold;
+    padding-bottom: .3em;
+    &:first-of-type {
+      padding-top: .6em;
+      border-top: $border-width-sm solid $base-color;
+    }
+  }
+  dd{
+    padding-bottom: .6em;
+    margin-bottom: .6em;
+    border-bottom: $border-width-sm $base-color solid;
+  }
+}
+
+
+
+/*------------------------------------*\
+  #ORDERED
+\*------------------------------------*/
+
+
+.content ol {
+  counter-reset:li;
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    @include font-size($font-sizes-md);
+    margin-bottom: .5em;
+    &:before {
+      content:counter(li);
+      counter-increment:li;
+      position: absolute;
+      left: 0;
+      @extend .font-body;
+      font-size: 1em;
+      color: rgba($base-color, .5);
+    }
+  }
+  ol > li:first-of-type {
+    margin-top: .5em;
+  }
+}
+
+
+/*------------------------------------*\
+  #UNORDERED
+\*------------------------------------*/
+
+
+.content ul {
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    @include font-size($font-sizes-md);
+    margin-bottom: .5em;
+    &:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      @extend .font-body;
+      font-size: 1em;
+    }
+  }
+  ol > li:first-of-type {
+    margin-top: .5em;
+  }
+}
+
+
+
+/*------------------------------------*\
+  #TABLE
+\*------------------------------------*/
+
+
+.content table {
+  width: 100%;
+  thead {
+    border-bottom: $border-width-md solid $base-color;
+  }
+  th {
+    text-align: left;
+    @extend .font-body-bold;
+  }
+  tbody tr {
+    &:nth-child(odd) {
+      background-color: rgba($base-color, .1);
+    }
+  }
+  tfoot {
+    border-top: $border-width-md solid $base-color;
+  }
+  th,
+  td {
+    padding: .5em 0;
+  }
+  @media (max-width: $screen-xs-max) {
+    th,
+    td {
+      display: block;
+    }
+  }
 }
