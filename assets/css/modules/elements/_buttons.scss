@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+
+.button {
+  display: inline-block;
+  background-color: $body-color;
+  border: $border-width-sm solid $base-color;
+  color: $base-color;
+  padding: .5em .8em .45em;
+  &:hover {
+    background-color: $base-color;
+    color: $body-color;
+  }
+}
+
+.button--alt {
+  background-color: $base-color;
+  border: $border-width-sm solid $body-color;
+  color: $body-color;
+  &:hover {
+    background-color: $body-color;
+    color: $base-color;
+  }
+}

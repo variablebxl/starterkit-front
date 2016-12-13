@@ -1,0 +1,59 @@
+/*------------------------------------*\
+  #PARTIALS
+\*------------------------------------*/
+
+
+@import "partials/_normalize.scss";
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+@import "partials/_grid-settings.scss";
+@import "partials/_grid-mixins.scss";
+@import "partials/_grid-make.scss";
+@import "partials/_typography.scss";
+@import "partials/_forms.scss";
+@import "partials/_extends.scss";
+
+
+
+/*------------------------------------*\
+  #MODULES
+\*------------------------------------*/
+
+
+@import "modules/elements/_buttons.scss";
+
+
+
+/*------------------------------------*\
+  #BASE-STYLES
+\*------------------------------------*/
+
+
+html {
+  font-size: 100%;
+  @include respond-to-max(768px, $IE9: false) { // Stop at precise width, as we're talking about devices
+    -webkit-text-size-adjust: 100%; // Stops text scaling in iOS.
+  }
+}
+
+body {
+  @extend .font-body;
+  background: $body-color;
+  color: $base-color;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/*------------------------------------*\
+  #PRINT
+\*------------------------------------*/
+
+
+@media print {
+  body {
+    font-size: percentage(10 / 16);
+  }
+}

@@ -1,0 +1,270 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+
+.font-body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-body-italic{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.font-body-bold{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.font-body-bold-italic{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+/*------------------------------------*\
+    #TYPESIZE/SCALE
+\*------------------------------------*/
+
+
+$font-size-xxs     : 12px;
+$font-size-xs      : 14px;
+$font-size-sm      : 16px;
+$font-size-md      : 18px;
+$font-size-lg      : 20px;
+$font-size-xl      : 28px;
+
+//** Unit-less `line-height`
+$line-height          : 1.6;
+// for use in components like buttons, labels
+$line-height-form     : 1.428571429 !default;     // 20/14
+$font-res-ratio       : 1.1;                      // responsive ratio
+
+
+
+/*------------------------------------*\
+    #FONTSIZES
+\*------------------------------------*/
+
+
+$font-sizes-xxs: (
+  null : ($font-size-xxs / ($font-res-ratio * $font-res-ratio), $line-height),
+  sm   : ($font-size-xxs / $font-res-ratio, $line-height),
+  md   : ($font-size-xxs, $line-height),
+  lg   : ($font-size-xxs * $font-res-ratio, $line-height),
+);
+
+$font-sizes-xs: (
+  null : ($font-size-xs / ($font-res-ratio * $font-res-ratio), $line-height),
+  sm   : ($font-size-xs / $font-res-ratio, $line-height),
+  md   : ($font-size-xs, $line-height),
+  lg   : ($font-size-xs * $font-res-ratio, $line-height),
+);
+
+$font-sizes-sm: (
+  null : ($font-size-sm / ($font-res-ratio * $font-res-ratio), $line-height),
+  sm   : ($font-size-sm / $font-res-ratio, $line-height),
+  md   : ($font-size-sm, $line-height),
+  lg   : ($font-size-sm * $font-res-ratio, $line-height),
+);
+
+$font-sizes-md: (
+  null : ($font-size-md / ($font-res-ratio * $font-res-ratio), $line-height),
+  sm   : ($font-size-md / $font-res-ratio, $line-height),
+  md   : ($font-size-md, $line-height),
+  lg   : ($font-size-md * $font-res-ratio, $line-height),
+);
+
+$font-sizes-lg: (
+  null : ($font-size-lg / ($font-res-ratio * $font-res-ratio), $line-height),
+  sm   : ($font-size-lg / $font-res-ratio, $line-height),
+  md   : ($font-size-lg, $line-height),
+  lg   : ($font-size-lg * $font-res-ratio, $line-height),
+);
+
+$font-sizes-xl: (
+  null : ($font-size-xl / ($font-res-ratio * $font-res-ratio), $line-height),
+  sm   : ($font-size-xl / $font-res-ratio, $line-height),
+  md   : ($font-size-xl, $line-height),
+  lg   : ($font-size-xl * $font-res-ratio, $line-height),
+);
+
+
+
+/*------------------------------------*\
+    #CORE TYPOGRAPHY
+\*------------------------------------*/
+
+
+h1 {
+  @include font-size($font-sizes-xl);
+}
+
+h2 {
+  @include font-size($font-sizes-xl);
+}
+
+h3,
+h4 {
+  @include font-size($font-sizes-lg);
+}
+
+h5,
+h6 {
+  @include font-size($font-sizes-md);
+}
+
+p {
+  @include font-size($font-sizes-md);
+  margin-bottom: .5em;
+}
+
+blockquote p {
+  @include font-size($font-sizes-lg);
+  text-align: center;
+}
+
+a {
+  color: $base-color;
+	border-bottom: $border-width-sm solid $action;
+	padding-bottom: .1em;
+  text-decoration: none;
+  @include link-active-styles {   // Mixin for interactions (hover,focus,active)
+    color: $action;
+  }
+}
+
+em,
+i{
+  @extend .font-body-italic;
+}
+
+b,
+strong{
+  @extend .font-body-bold;
+}
+
+em > b,
+b > em,
+i > b,
+b > i,
+em > strong,
+strong > em,
+i > strong,
+strong > i {
+  @extend .font-body-bold-italic;
+}
+
+p sub, p sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+p sup {
+  top: -0.5em;
+}
+
+p sub {
+  bottom: -0.25em;
+}
+
+p small{
+  @include font-size($font-sizes-sm);
+}
+
+p abbr {
+  border-bottom: $border-width-sm dotted $base-color;
+  cursor: help;
+}
+
+p q,
+p cite {
+ &:before {
+    content:'"';
+ }
+ &:after {
+    content:'"';
+ }
+}
+
+p mark {
+  background-color: rgba($blue, .4);
+  color: $base-color;
+}
+
+p code,
+p samp {
+  font-family: monospace;
+  @include font-size($font-sizes-md);
+}
+
+pre {
+  font-family: monospace;
+  @include font-size($font-sizes-md);
+}
+
+hr {
+  background: $base-color;
+  height: $border-width-md;
+  border: none;
+  margin: 0;
+}
+
+figcaption {
+  @include font-size($font-sizes-sm);
+  @include margin-top($spacing-xs-responsive);
+}
+
+dl {
+  dt {
+    @include font-size($font-sizes-sm);
+    @include margin-bottom($spacing-xs-responsive);
+    &:first-of-type{
+      @include padding-top($spacing-sm-responsive);
+      border-top: $border-width-sm $base-color solid;
+    }
+  }
+  dd{
+    padding-bottom: $spacing-sm;
+    margin-bottom: $spacing-sm;
+    border-bottom: $border-width-sm $base-color solid;
+  }
+}
+
+ol, ul, pre, dl {
+  @include font-size($font-sizes-md);
+}
+ul, ol {
+  @include nobullet;
+}
+ul ul {
+  @include font-size($font-sizes-md);
+}
+ol ol {
+  @include font-size($font-sizes-md);
+}
+.text ul {
+  @include unordered; margin-left: 1em;
+}
+.text ol {
+  @include ordered; margin-left: 1em;
+}
+.text > ul,
+.text > ol {
+  margin-bottom: 1em;
+}
+li {
+  line-height: inherit;
+}
+input, textarea, label, select {
+  line-height: $line-height-form
+}
