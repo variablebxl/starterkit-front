@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="index">
+  <ul class="index__list">
+    {% for index_item in index_items %}
+    <li class="index__item">
+      <a href="{{ index_item.url }}" class="item__link">
+        <span class="item__date">{{ index_item.year }}</span>
+        {% if index_item.thumb_highres %}
+        <div class="item__thumb">
+          <img src="{{ index_item.thumb_lowres }}" data-src="{{ index_item.thumb_highres }}" alt="{{ index_item.title }}">
+        </div>
+        {% endif %}
+        <h2 class="item__title">{{ index_item.title }}</h2>
+        {% if index_item.excerpt %}
+        <p class="item__excerpt">{{ index_item.excerpt }}</p>
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

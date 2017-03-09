@@ -1,0 +1,141 @@
+/*------------------------------------*\
+    #CORE TYPOGRAPHY
+\*------------------------------------*/
+
+
+h1,
+h2 {
+  @extend %font-size-xl;
+  @extend %font-body-bold;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @extend %font-size-lg;
+  @extend %font-body-bold;
+}
+
+p {
+  @extend %font-size-md;
+  margin-bottom: .5em;
+}
+
+blockquote p {
+  @extend %font-size-md;
+  text-align: center;
+}
+
+a {
+  color: $action;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+em,
+i{
+  @extend %font-body-italic;
+}
+
+b,
+strong{
+  @extend %font-body-bold;
+}
+
+em > b,
+b > em,
+i > b,
+b > i,
+em > strong,
+strong > em,
+i > strong,
+strong > i {
+  @extend %font-body-bold-italic;
+}
+
+p sub, p sup {
+  font-size: .75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+p sup {
+  top: -0.5em;
+}
+
+p sub {
+  bottom: -0.25em;
+}
+
+p small{
+  @extend %font-size-sm;
+}
+
+p abbr {
+  border-bottom: $border-width-sm dotted $base-color;
+  cursor: help;
+}
+
+p q,
+p cite {
+ &:before {
+    content:'"';
+ }
+ &:after {
+    content:'"';
+ }
+}
+
+p mark {
+  background-color: rgba($yellow, .6);
+  color: $base-color;
+}
+
+p code,
+p samp,
+pre {
+  font-family: monospace;
+  @extend %font-size-md;
+}
+
+hr {
+  background: $base-color;
+  height: $border-width-md;
+  border: none;
+  margin: 0;
+}
+
+figcaption {
+  @extend %font-size-sm;
+  margin-top: $spacing-xs;
+}
+
+ol, ul, pre, dl {
+  @extend %font-size-md;
+}
+
+ul ul,
+ol ol {
+  @extend %font-size-md;
+}
+
+.text ul {
+  margin-left: 1em;
+}
+
+.text ol {
+  margin-left: 1em;
+}
+
+.text > ul,
+.text > ol {
+  margin-bottom: 1em;
+}
+
+li {
+  line-height: inherit;
+}

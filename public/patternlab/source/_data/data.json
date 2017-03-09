@@ -1,0 +1,90 @@
+{
+  "site_title" : "Variable 3000",
+  "site_url" : "#",
+  "nav_items" : [
+    {
+      "title" : "index",
+      "url" : "#",
+      "go_out" : false
+    },
+    {
+      "title" : "infos",
+      "url" : "#",
+      "go_out" : false
+    }
+  ],
+  "index_items" : [
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper scelerisque massa eu accumsan.",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper scelerisque massa eu accumsan.",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper scelerisque massa eu accumsan.",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "",
+      "url" : "#"
+    },
+    {
+      "title" : "Project title",
+      "thumb_lowres" : "../../../source/images/projects/park-lowres.jpg",
+      "thumb_highres" : "../../../source/images/projects/park-highres.jpg",
+      "year" : "2017",
+      "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper scelerisque massa eu accumsan.",
+      "url" : "#"
+    }
+  ]
+}

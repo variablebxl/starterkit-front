@@ -11,24 +11,28 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload');
 
 
-gulp.task('js', function() {
-  gulp.src(['assets/js/vendor/*.js', 'assets/js/*.js'])
+////
+// Front Tasks
+////
+
+gulp.task('front-js', function() {
+  gulp.src(['resources/assets/js/vendor/*.js', 'resources/assets/js/*.js'])
   // Concatène tous les fichiers js en 1
   .pipe(concat('scripts.js'))
   // Indente
   .pipe(beautify({indentSize: 2}))
-  // Sauve le fichier dans Dist
-  .pipe(gulp.dest("dist"))
+  // Sauve le fichier dans public/assets
+  .pipe(gulp.dest("public/assets"))
   // Renomme le fichier avec .min
   .pipe(rename({suffix: '.min'}))
   // Compresse le fichier
   .pipe(uglify())
-  // Sauve le fichier compressé dans Dist
-  .pipe(gulp.dest('dist'))
+  // Sauve le fichier compressé dans public/assets
+  .pipe(gulp.dest('public/assets'))
 });
 
-gulp.task("sass", function(){
-  gulp.src('assets/css/*.scss')
+gulp.task("front-sass", function(){
+  gulp.src('resources/assets/css/*.scss')
   .pipe(sourcemaps.init())
   // Compile sass avec les commentaires dans la source
   .pipe(sass({
@@ -39,50 +43,79 @@ gulp.task("sass", function(){
   .pipe(autoprefixer())
   // Commente le code pour debug avec firebug
   .pipe(sourcemaps.write())
-  // Sauve le fichier dans Dist
-  .pipe(gulp.dest("dist"))
+  // Sauve le fichier dans public/assets
+  .pipe(gulp.dest("public/assets"))
   // Renomme le fichier avec .min
   .pipe(rename({suffix: '.min'}))
   // Compresse le fichier
   .pipe(cssmin())
-  // Sauve le fichier dans Dist
-  .pipe(gulp.dest('dist'))
-  .pipe(livereload())
-});
-
-gulp.task("css-font", function(){
-  gulp.src('assets/fonts/*.scss')
-  .pipe(sourcemaps.init())
-  // Compile sass avec les commentaires dans la source
-  .pipe(sass({
-    style: 'expanded',
-    sourceComments: 'normal'
-  }))
-  // Ajoute des préfixes automatiquement
-  .pipe(autoprefixer())
-  // Commente le code pour debug avec firebug
-  .pipe(sourcemaps.write())
-  // Sauve le fichier dans Dist
-  .pipe(gulp.dest("dist"))
-  // Renomme le fichier avec .min
-  .pipe(rename({suffix: '.min'}))
-  // Compresse le fichier
-  .pipe(cssmin())
-  // Sauve le fichier dans Dist
-  .pipe(gulp.dest('dist'))
+  // Sauve le fichier dans public/assets
+  .pipe(gulp.dest('public/assets'))
   .pipe(livereload())
 });
 
 gulp.task('patternlab', shell.task([
   // Lance Patternalb Watch
-  'cd patternlab && php core/console --watch --patternsonly'
+  'cd public/patternlab && php core/console --watch --patternsonly'
 ]));
 
-gulp.task('watch', function() {
+gulp.task('front', function() {
   livereload.listen();
-  gulp.watch('assets/js/**/*.js',['js']);
-  gulp.watch('assets/css/**/*.scss',['sass']);
-  gulp.watch('assets/fonts/*.scss',['css-font']);
+  gulp.watch('resources/assets/js/**/*.js',['front-js']);
+  gulp.watch('resources/assets/css/**/*.scss',['front-sass']);
 });
 
-gulp.task('default', ['watch', 'patternlab']);
+
+////
+// Admin Tasks
+////
+
+gulp.task('admin-js', function() {
+  gulp.src([
+    'resources/assets/admin/js/vendor/*.js',
+    'resources/assets/admin/js/libs/*.js',
+    'resources/assets/admin/js/*.js'
+  ])
+  // Concatène tous les fichiers js en 1
+  .pipe(concat('scripts.js'))
+  // Indente
+  .pipe(beautify({indentSize: 2}))
+  // Sauve le fichier dans public/assets
+  .pipe(gulp.dest("public/assets/admin"))
+  // Renomme le fichier avec .min
+  .pipe(rename({suffix: '.min'}))
+  // Compresse le fichier
+  .pipe(uglify())
+  // Sauve le fichier compressé dans public/assets
+  .pipe(gulp.dest('public/assets/admin'))
+});
+
+gulp.task("admin-sass", function(){
+  gulp.src('resources/assets/admin/css/*.scss')
+  .pipe(sourcemaps.init())
+  // Compile sass avec les commentaires dans la source
+  .pipe(sass({
+    style: 'expanded',
+    sourceComments: 'normal'
+  }))
+  // Ajoute des préfixes automatiquement
+  .pipe(autoprefixer())
+  // Commente le code pour debug avec firebug
+  .pipe(sourcemaps.write())
+  // Sauve le fichier dans public/assets
+  .pipe(gulp.dest('public/assets/admin'))
+  // Renomme le fichier avec .min
+  .pipe(rename({suffix: '.min'}))
+  // Compresse le fichier
+  .pipe(cssmin())
+  // Sauve le fichier dans public/assets
+  .pipe(gulp.dest('public/assets/admin'))
+  .pipe(livereload())
+});
+
+
+gulp.task('admin', function() {
+  livereload.listen();
+  gulp.watch('resources/assets/admin/js/**/*.js',['admin-js']);
+  gulp.watch('resources/assets/admin/css/**/*.scss',['admin-sass']);
+});
