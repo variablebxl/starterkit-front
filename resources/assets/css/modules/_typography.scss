@@ -4,33 +4,32 @@
 
 
 h1,
-h2 {
-  @extend %font-size-xl;
-  @extend %font-body-bold;
-}
-
+h2,
 h3,
 h4,
 h5,
 h6 {
-  @extend %font-size-lg;
-  @extend %font-body-bold;
+ @extend %font-body-bold;
 }
 
 p {
-  @extend %font-size-md;
-  margin-bottom: .5em;
+  @extend %font-body;
 }
 
-blockquote p {
-  @extend %font-size-md;
-  text-align: center;
+blockquote {
+  & > p {
+    @extend %font-var;
+  }
+  & > blockquote p {
+    @extend %font-var;
+  }
 }
 
 a {
   color: $action;
   text-decoration: none;
   &:hover {
+    color: $action-response;
     text-decoration: underline;
   }
 }
@@ -91,7 +90,7 @@ p cite {
 }
 
 p mark {
-  background-color: rgba($yellow, .6);
+  background-color: rgba($base-color, .6);
   color: $base-color;
 }
 
@@ -118,24 +117,115 @@ ol, ul, pre, dl {
   @extend %font-size-md;
 }
 
-ul ul,
-ol ol {
+
+/*------------------------------------*\
+  #DEFINITIONS
+\*------------------------------------*/
+
+
+dl {
   @extend %font-size-md;
+  dt {
+    @extend %font-body-bold;
+    padding-bottom: .3em;
+    &:first-of-type {
+      padding-top: .6em;
+      border-top: $border-width-sm solid $base-color;
+    }
+  }
+  dd{
+    padding-bottom: .6em;
+    margin-bottom: .6em;
+    border-bottom: $border-width-sm $base-color solid;
+  }
 }
 
-.text ul {
-  margin-left: 1em;
+
+
+/*------------------------------------*\
+  #ORDERED
+\*------------------------------------*/
+
+
+.body ol {
+  counter-reset:li;
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    @extend %font-size-md;
+    margin-bottom: .5em;
+    &:before {
+      content:counter(li);
+      counter-increment:li;
+      position: absolute;
+      left: 0;
+      @extend %font-body;
+      font-size: 1em;
+      color: rgba($base-color, .5);
+    }
+  }
+  ol > li:first-of-type {
+    margin-top: .5em;
+  }
 }
 
-.text ol {
-  margin-left: 1em;
+
+/*------------------------------------*\
+  #UNORDERED
+\*------------------------------------*/
+
+
+.body ul {
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    @extend %font-size-md;
+    margin-bottom: .5em;
+    &:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      @extend %font-body;
+      font-size: 1em;
+    }
+  }
+  ol > li:first-of-type {
+    margin-top: .5em;
+  }
 }
 
-.text > ul,
-.text > ol {
-  margin-bottom: 1em;
-}
 
-li {
-  line-height: inherit;
+
+/*------------------------------------*\
+  #TABLE
+\*------------------------------------*/
+
+
+.body table {
+  width: 100%;
+  thead {
+    border-bottom: $border-width-md solid $base-color;
+  }
+  th {
+    text-align: left;
+    @extend %font-body-bold;
+  }
+  tbody tr {
+    &:nth-child(odd) {
+      background-color: rgba($base-color, .1);
+    }
+  }
+  tfoot {
+    border-top: $border-width-md solid $base-color;
+  }
+  th,
+  td {
+    padding: .5em 0;
+  }
+  @media (max-width: $screen-xs-max) {
+    th,
+    td {
+      display: block;
+    }
+  }
 }

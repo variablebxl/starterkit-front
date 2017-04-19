@@ -1,6 +1,5 @@
 .DS_Store
 export/*
+public/*
 source/styleguide/*
-source/css/*
-source/js/*
 vendor/*

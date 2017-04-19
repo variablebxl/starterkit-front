@@ -4,12 +4,10 @@
 
 
 // Main colour palette
-$black            : #000000;
 $white            : #FFFFFF;
+$black            : #000000;
 $blue             : #0000FF;
 $red              : #FF0000;
-$yellow           : #F9FF05;
-$green            : #05FF4A;
 
 // Assign colours to variable roles
 $body-color       : $white;
@@ -65,31 +63,25 @@ $border-width-md         : $border-width-sm*3;
 \*------------------------------------*/
 
 
-%font-body{
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
+%font-body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-%font-body-italic{
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: italic;
+%font-body-italic {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-%font-body-bold{
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-style: normal;
+%font-body-bold {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-%font-body-bold-italic{
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-style: italic;
+%font-body-bold-italic {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
+%font-var {
+  font-family: "Times New Roman", Times, Georgia, serif;
+}
 
 /*------------------------------------*\
     #TYPESIZE/SCALE
@@ -108,7 +100,6 @@ $font-size-xl      : $font-base * $type-scale * $type-scale;
 
 html {
   font-size: 16px;
-  letter-spacing: .0625em;
   word-spacing: normal;
 }
 
