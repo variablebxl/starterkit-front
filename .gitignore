@@ -1,2 +1,14 @@
 .DS_Store
-node_modules
+
+vendor/
+node_modules/
+
+# Laravel 5
+bootstrap/cache/
+.env.*.php
+.env.php
+.env
+
+public/medias
+
+
