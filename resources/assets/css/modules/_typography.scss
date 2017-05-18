@@ -14,9 +14,15 @@ h6 {
 
 p {
   @extend %font-body;
+  .body & {
+    margin-bottom: .5em;
+  }
 }
 
 blockquote {
+  padding-left: 1em;
+  border-left: $border-width-sm solid $base-color;
+  margin-top: 1em;
   & > p {
     @extend %font-var;
   }
@@ -53,6 +59,48 @@ strong > em,
 i > strong,
 strong > i {
   @extend %font-body-bold-italic;
+}
+
+p + h2,
+ul + h2,
+ol + h2,
+blockquote + h2,
+p + h2,
+ul + h2,
+ol + h2,
+blockquote + h2,
+p + h3,
+ul + h3,
+ol + h3,
+blockquote + h3,
+p + h4,
+ul + h4,
+ol + h4,
+blockquote + h4 {
+  margin-top: 2em;
+}
+
+.body h2,
+.body h3,
+.body h4,
+.body blockquote {
+  margin-bottom: 1em;
+}
+.body h2 + h3,
+.body h3 + h4 {
+  margin-top: 0;
+}
+
+.body ul,
+.body ol,
+.body .embed-container {
+  margin-bottom: $spacing-md;
+  @extend %font-size-md;
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 p sub, p sup {
@@ -123,7 +171,7 @@ ol, ul, pre, dl {
 \*------------------------------------*/
 
 
-dl {
+.body dl {
   @extend %font-size-md;
   dt {
     @extend %font-body-bold;

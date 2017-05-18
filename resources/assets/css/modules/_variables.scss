@@ -99,8 +99,10 @@ $font-size-xl      : $font-base * $type-scale * $type-scale;
 
 
 html {
-  font-size: 16px;
-  word-spacing: normal;
+  font-size: 17px;
+  @media (max-width: $screen-xs-max) {
+    font-size: 15px;
+  }
 }
 
 %font-size-xs {
