@@ -3,6 +3,25 @@
 \*------------------------------------*/
 
 
+.hidden {
+  display: none !important;
+}
+
+.hidden-mobile {
+  @media (max-width: $screen-xs-max) {
+    display: none !important;
+  }
+}
+.hidden-desktop {
+  @media (min-width: $screen-sm-min) {
+    display: none !important;
+  }
+}
+
+.nav__list {
+  list-style: none;
+}
+
 // patternlab
 .sg-main {
   padding: 2rem;
