@@ -56,7 +56,7 @@ gulp.task("front-sass", function(){
 
 gulp.task('patternlab', shell.task([
   // Lance Patternalb Watch
-  'cd resources/patternlab && php core/console --watch --patternsonly'
+  'cd patternlab && php core/console --watch --patternsonly'
 ]));
 
 gulp.task('front', function() {
