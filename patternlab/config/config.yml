@@ -17,7 +17,7 @@ styleGuideExcludes: ''
 cacheBusterOn: 'true'
 exportDir: export
 publicDir: ../public/patternlab
-sourceDir: ../resources/patterns
+sourceDir: sources
 defaultPattern: all
 defaultShowPatternInfo: false
 plugins:
