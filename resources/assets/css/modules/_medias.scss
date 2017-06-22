@@ -16,11 +16,11 @@ img.image-lazy {
   width: 100%;
   &:not(.lazyloaded) {
     opacity: 0;
-    transition: opacity 1s ease-in-out; 
+    transition: opacity 1s ease-in-out;
   }
   &.lazyloaded {
     opacity: 1;
-    transition: opacity 1s ease-in-out; 
+    transition: opacity 1s ease-in-out;
   }
 }
 
