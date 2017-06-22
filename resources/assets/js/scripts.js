@@ -1,8 +1,5 @@
-jQuery(document).ready(function($) {
+/*------------------------------------*\
+  #SCRIPTS
+\*------------------------------------*/
 
-  // fastclick
-  $(function() {
-    FastClick.attach(document.body);
-  });
-
-});
+var fastclick = require('./modules/_fastclick.js');

@@ -8,7 +8,11 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    gutil = require('gulp-util');
 
 
 ////
@@ -16,19 +20,24 @@ var gulp = require('gulp'),
 ////
 
 gulp.task('front-js', function() {
-  gulp.src(['resources/assets/js/vendor/*.js', 'resources/assets/js/*.js'])
-  // Concatène tous les fichiers js en 1
-  .pipe(concat('scripts.js'))
-  // Indente
-  .pipe(beautify({indentSize: 2}))
-  // Sauve le fichier dans public/assets
-  .pipe(gulp.dest("public/assets"))
-  // Renomme le fichier avec .min
-  .pipe(rename({suffix: '.min'}))
-  // Compresse le fichier
-  .pipe(uglify())
-  // Sauve le fichier compressé dans public/assets
-  .pipe(gulp.dest('public/assets'))
+  var b = browserify({
+    // entries: ['resources/assets/js/modules/*.js', 'resources/assets/js/*.js'],
+    entries: './resources/assets/js/scripts.js',
+    debug: true
+  });
+  return b.bundle()
+    .pipe(source('scripts.js'))
+    .pipe(buffer())
+    // Indente
+    .pipe(beautify({indentSize: 2}))
+    // Sauve le fichier dans public/assets
+    .pipe(gulp.dest("./public/assets"))
+    // Renomme le fichier avec .min
+    .pipe(rename({suffix: '.min'}))
+    // Compresse le fichier
+    .pipe(uglify())
+    // Sauve le fichier compressé dans public/assets
+    .pipe(gulp.dest('./public/assets'))
 });
 
 gulp.task("front-sass", function(){
