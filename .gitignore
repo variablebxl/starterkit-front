@@ -1,12 +1,16 @@
 .DS_Store
-
-vendor/
 node_modules/
-
-# Laravel 5
-bootstrap/cache/
-.env.*.php
-.env.php
-.env
-
+public/hot
+public/storage
 public/medias
+storage/*.key
+storage/debugbar
+vendor/
+.idea
+.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
+vendor/*
+composer.lock
