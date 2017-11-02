@@ -8,12 +8,12 @@
 }
 
 .hidden-mobile {
-  @media (max-width: $screen-xs-max) {
+  @include media-breakpoint-down(sm) {
     display: none !important;
   }
 }
 .hidden-desktop {
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     display: none !important;
   }
 }

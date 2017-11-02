@@ -21,31 +21,63 @@ $action-response  : $red;
   #BREAKPOINTS
 \*------------------------------------*/
 
-// Extra small screen / phone
-$screen-xs:                  600px !default;
-$screen-xs-min:              $screen-xs !default;
+// // Extra small screen / phone
+// $screen-xs:                  600px !default;
+// $screen-xs-min:              $screen-xs !default;
+//
+// // Small screen / tablet
+// $screen-sm:                  900px !default;
+// $screen-sm-min:              $screen-sm !default;
+//
+// // Medium screen / desktop
+// $screen-md:                  1200px !default;
+// $screen-md-min:              $screen-md !default;
+//
+// // Large screen / wide desktop
+// $screen-lg:                  1600px !default;
+// $screen-lg-min:              $screen-lg !default;
+//
+// // So media queries don't overlap when required, provide a maximum
+// $screen-xs-max:              ($screen-sm-min - 1) !default;
+// $screen-sm-max:              ($screen-md-min - 1) !default;
+// $screen-md-max:              ($screen-lg-min - 1) !default;
+//
+// // Number of columns in the grid.
+// $grid-columns:              12 !default;
+// //Padding between columns. Gets divided in half for the left and right.
+// $grid-gutter-width:         20px !default;
 
-// Small screen / tablet
-$screen-sm:                  900px !default;
-$screen-sm-min:              $screen-sm !default;
 
-// Medium screen / desktop
-$screen-md:                  1200px !default;
-$screen-md-min:              $screen-md !default;
+// Grid breakpoints
+$enable-grid-classes:       true !default;
 
-// Large screen / wide desktop
-$screen-lg:                  1600px !default;
-$screen-lg-min:              $screen-lg !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
 
-// Number of columns in the grid.
-$grid-columns:              12 !default;
-//Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         20px !default;
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
 
 
 /*------------------------------------*\
@@ -100,7 +132,7 @@ $font-size-xl      : $font-base * $type-scale * $type-scale;
 
 html {
   font-size: 17px;
-  @media (max-width: $screen-xs-max) {
+  @include media-breakpoint-down(sm) {
     font-size: 15px;
   }
 }

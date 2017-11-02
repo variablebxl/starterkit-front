@@ -270,7 +270,7 @@ ol, ul, pre, dl {
   td {
     padding: .5em 0;
   }
-  @media (max-width: $screen-xs-max) {
+  @include media-breakpoint-down(sm) {
     th,
     td {
       display: block;
