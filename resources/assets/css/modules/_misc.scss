@@ -8,12 +8,12 @@
 }
 
 .hidden-mobile {
-  @include media-breakpoint-down(sm) {
+  @include media("<sm") {
     display: none !important;
   }
 }
 .hidden-desktop {
-  @include media-breakpoint-up(sm) {
+  @include media(">sm") {
     display: none !important;
   }
 }

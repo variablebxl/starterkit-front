@@ -16,7 +16,7 @@ patternStates:
 styleGuideExcludes: ''
 cacheBusterOn: 'true'
 exportDir: export
-publicDir: ../public/patternlab
+publicDir: ../../public/patternlab
 sourceDir: sources
 defaultPattern: all
 defaultShowPatternInfo: false

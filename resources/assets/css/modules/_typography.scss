@@ -1,37 +1,88 @@
 /*------------------------------------*\
-    #CORE TYPOGRAPHY
+  #TEXT-STYLES
 \*------------------------------------*/
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
- @extend %font-body-bold;
+.ts-title {
+  @extend %font-size-xxl;
+  @extend %font-body-bold;
+}
+.ts-subtitle {
+  @extend %font-size-xl;
+  @extend %font-body-bold;
+}
+.ts-subsubtitle {
+  @extend %font-size-lg;
+  @extend %font-body-bold;
+}
+.ts-body {
+  @extend %font-size-md;
+}
+.ts-small {
+  @extend %font-size-sm;
+}
+.ts-xsmall {
+  @extend %font-size-xs;
+}
+.ts-link {
+  color: $action;
+  border-bottom: $border-width-sm solid $action;
+  text-decoration: none;
+  &:hover {
+    color: $action-response;
+    border-color: $action-response;
+    text-decoration: none;
+  }
 }
 
-p {
-  @extend %font-body;
-  .body & {
+/*------------------------------------*\
+  #TITLE
+\*------------------------------------*/
+
+.body {
+  h1,
+  h2 {
+    @extend .ts-title !optional;
+  }
+  h3 {
+    @extend .ts-subtitle !optional;
+  }
+  h4,
+  h5,
+  h6 {
+    @extend .ts-subsubtitle !optional;
+  }
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 1em;
+  }
+  h2 + h3,
+  h3 + h4 {
+    margin-top: 0;
+  }
+}
+
+
+
+/*------------------------------------*\
+  #PARAGRAPH
+\*------------------------------------*/
+
+.body {
+  @extend .ts-body !optional;
+  p {
+    @extend .ts-body !optional;
     margin-bottom: .5em;
   }
 }
 
-blockquote {
-  padding-left: 1em;
-  border-left: $border-width-sm solid $base-color;
-  margin-top: 1em;
-  & > p {
-    @extend %font-var;
-  }
-  & > blockquote p {
-    @extend %font-var;
-  }
-}
 
-a {
+
+/*------------------------------------*\
+  #LINK
+\*------------------------------------*/
+
+.body a {
   color: $action;
   text-decoration: none;
   &:hover {
@@ -40,139 +91,59 @@ a {
   }
 }
 
-em,
-i{
-  @extend %font-body-italic;
+
+
+/*------------------------------------*\
+  #BOLD-ITALIC
+\*------------------------------------*/
+
+.body {
+  em,
+  i{
+    @extend %font-body-italic;
+  }
+  b,
+  strong{
+    @extend %font-body-bold;
+  }
+  em > b,
+  b > em,
+  i > b,
+  b > i,
+  em > strong,
+  strong > em,
+  i > strong,
+  strong > i {
+    @extend %font-body-bold-italic;
+  }
 }
 
-b,
-strong{
-  @extend %font-body-bold;
-}
 
-em > b,
-b > em,
-i > b,
-b > i,
-em > strong,
-strong > em,
-i > strong,
-strong > i {
-  @extend %font-body-bold-italic;
-}
 
-p + h2,
-ul + h2,
-ol + h2,
-blockquote + h2,
-p + h2,
-ul + h2,
-ol + h2,
-blockquote + h2,
-p + h3,
-ul + h3,
-ol + h3,
-blockquote + h3,
-p + h4,
-ul + h4,
-ol + h4,
-blockquote + h4 {
-  margin-top: 2em;
-}
+/*------------------------------------*\
+  #BLOCKQUOTE
+\*------------------------------------*/
 
-.body h2,
-.body h3,
-.body h4,
 .body blockquote {
-  margin-bottom: 1em;
-}
-.body h2 + h3,
-.body h3 + h4 {
-  margin-top: 0;
-}
-
-.body ul,
-.body ol,
-.body .embed-container {
-  margin-bottom: $spacing-md;
-  @extend %font-size-md;
+  padding-left: 1em;
+  border-left: $border-width-sm solid $base-color;
+  margin-top: 1em;
+  & > p {
+    @extend %font-body-italic;
+  }
+  & > blockquote p {
+    @extend %font-body-italic;
+  }
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
-p sub, p sup {
-  font-size: .75em;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-p sup {
-  top: -0.5em;
-}
-
-p sub {
-  bottom: -0.25em;
-}
-
-p small{
-  @extend %font-size-sm;
-}
-
-p abbr {
-  border-bottom: $border-width-sm dotted $base-color;
-  cursor: help;
-}
-
-p q,
-p cite {
- &:before {
-    content:'"';
- }
- &:after {
-    content:'"';
- }
-}
-
-p mark {
-  background-color: rgba($base-color, .6);
-  color: $base-color;
-}
-
-p code,
-p samp,
-pre {
-  font-family: monospace;
-  @extend %font-size-md;
-}
-
-hr {
-  background: $base-color;
-  height: $border-width-md;
-  border: none;
-  margin: 0;
-}
-
-figcaption {
-  @extend %font-size-sm;
-  margin-top: $spacing-xs;
-}
-
-ol, ul, pre, dl {
-  @extend %font-size-md;
-}
 
 
 /*------------------------------------*\
   #DEFINITIONS
 \*------------------------------------*/
 
-
 .body dl {
-  @extend %font-size-md;
+  @extend .ts-body !optional;
   dt {
     @extend %font-body-bold;
     padding-bottom: .3em;
@@ -191,24 +162,23 @@ ol, ul, pre, dl {
 
 
 /*------------------------------------*\
-  #ORDERED
+  #LISTS
 \*------------------------------------*/
 
-
+// ORDERED
 .body ol {
   counter-reset:li;
   li {
     position: relative;
     padding-left: 1.2em;
-    @extend %font-size-md;
+    @extend .ts-body !optional;
     margin-bottom: .5em;
     &:before {
       content:counter(li);
       counter-increment:li;
       position: absolute;
       left: 0;
-      @extend %font-body;
-      font-size: 1em;
+      @extend .ts-body !optional;
       color: rgba($base-color, .5);
     }
   }
@@ -217,23 +187,18 @@ ol, ul, pre, dl {
   }
 }
 
-
-/*------------------------------------*\
-  #UNORDERED
-\*------------------------------------*/
-
-
+// UNORDERED
 .body ul {
   li {
     position: relative;
     padding-left: 1.2em;
-    @extend %font-size-md;
+    @extend .ts-body !optional;
     margin-bottom: .5em;
     &:before {
       content: "-";
       position: absolute;
       left: 0;
-      @extend %font-body;
+      @extend .ts-body !optional;
       font-size: 1em;
     }
   }
@@ -270,10 +235,114 @@ ol, ul, pre, dl {
   td {
     padding: .5em 0;
   }
-  @include media-breakpoint-down(sm) {
+  @include media("<sm") {
     th,
     td {
       display: block;
     }
+  }
+}
+
+
+
+/*------------------------------------*\
+  #SPACING
+\*------------------------------------*/
+
+.body {
+  p + h1,
+  ul + h1,
+  ol + h1,
+  blockquote + h1,
+  figure + h1,
+  p + h2,
+  ul + h2,
+  ol + h2,
+  blockquote + h2,
+  figure + h2,
+  p + h3,
+  ul + h3,
+  ol + h3,
+  blockquote + h3,
+  figure + h3,
+  p + h4,
+  ul + h4,
+  ol + h4,
+  blockquote + h4,
+  figure + h4,
+  p + h5,
+  ul + h5,
+  ol + h5,
+  blockquote + h5,
+  figure + h5,
+  p + h6,
+  ul + h6,
+  ol + h6,
+  blockquote + h6,
+  figure + h6 {
+    margin-top: 1.3em;
+  }
+  ul,
+  ol,
+  .embed-container {
+    margin-bottom: $spacing-md;
+  }
+}
+
+
+
+/*------------------------------------*\
+  #MISC
+\*------------------------------------*/
+
+.body {
+  ol,
+  ul {
+    list-style: none;
+  }
+  sub,
+  sup {
+    font-size: .75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sup {
+    top: -0.5em;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  small{
+    @extend %font-size-sm;
+  }
+  abbr {
+    border-bottom: $border-width-sm dotted $base-color;
+    cursor: help;
+  }
+  q,
+  cite {
+    &:before {
+      content:'"';
+    }
+    &:after {
+      content:'"';
+    }
+  }
+  mark {
+    background-color: rgba($base-color, .6);
+    color: $base-color;
+  }
+  code,
+  samp,
+  pre {
+    font-family: monospace;
+    @extend %font-size-sm;
+  }
+  hr {
+    background: $base-color;
+    height: $border-width-md;
+    border: none;
+    margin: 0;
   }
 }

@@ -5,6 +5,7 @@ public/storage
 public/medias
 storage/*.key
 storage/debugbar
+storage/framework/cache/
 .idea
 .vagrant
 Homestead.json
@@ -13,3 +14,4 @@ npm-debug.log
 .env
 /vendor/*
 composer.lock
+sitemap.xml

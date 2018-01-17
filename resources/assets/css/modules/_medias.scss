@@ -24,6 +24,11 @@ img.image-lazy {
   }
 }
 
+figcaption {
+  @extend %font-size-sm;
+  margin-top: $spacing-xs;
+}
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
