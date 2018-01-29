@@ -12,19 +12,17 @@ let mix = require('laravel-mix');
  */
 
 mix.options({
-  processCssUrls: false, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
+  processCssUrls: false
 });
 
 mix.js('resources/assets/js/scripts.js', 'public/assets');
 mix.sass('resources/assets/css/screen.scss', 'public/assets').sourceMaps();
 mix.browserSync({
   proxy: 'foldername.dev/',
-  target: 'foldername.dev/',
+  target: 'http://foldername.dev/',
   port: 8080,
   open: false,
   files : [
-    'resources/assets/css/**/*.scss',
-    'resources/assets/js/**/*.js',
-    'resources/patternlab/sources/**/*.mustache'
+    'resources/**/*'
   ]
 });
