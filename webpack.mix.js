@@ -17,12 +17,14 @@ mix.options({
 
 mix.js('resources/assets/js/scripts.js', 'public/assets');
 mix.sass('resources/assets/css/screen.scss', 'public/assets').sourceMaps();
-mix.browserSync({
-  proxy: 'foldername.dev/',
-  target: 'http://foldername.dev/',
-  port: 8080,
-  open: false,
-  files : [
-    'resources/**/*'
-  ]
-});
+mix.browserSync(
+  {
+    files : ['public/assets/**/*.css', '**/*.blade.php', '!resources/assets/**/*'],
+    proxy: 'lacambre.dev/',
+    port: 8080,
+    open: false
+  },
+  {
+    reload: false
+  }
+);
