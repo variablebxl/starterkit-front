@@ -40,7 +40,7 @@ body {
   background: $body-color;
   color: $base-color;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
   ::-moz-selection { background-color: rgba($base-color, .2); color: $base-color; }
   ::selection { background-color: rgba($base-color, .2); color: $base-color; }
 }
@@ -52,8 +52,10 @@ body {
 \*------------------------------------*/
 
 
+@import "modules/_print-style.scss";
 @media print {
-  body {
-    font-size: percentage(10 / 16);
+  html {
+    font-size: 14px;
   }
+  @include print-style;
 }
