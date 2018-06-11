@@ -2,15 +2,15 @@
   #MODULES
 \*------------------------------------*/
 
+@import "utils/_include-media.scss";
+@import "_variables.scss";
 
-@import "modules/_reset.scss";
-@import "modules/_include-media.scss";
-@import "modules/_fonts.scss";
-@import "modules/_variables.scss";
-@import "modules/_mixins.scss";
-@import "modules/_typography.scss";
-@import "modules/_medias.scss";
-@import "modules/_misc.scss";
+@import "utils/_reset.scss";
+@import "utils/_fonts.scss";
+@import "utils/_mixins.scss";
+@import "utils/_typography.scss";
+@import "utils/_medias.scss";
+@import "utils/_misc.scss";
 
 
 /*------------------------------------*\
@@ -18,8 +18,8 @@
 \*------------------------------------*/
 
 
-// @import "partials/components/_buttons.scss";
-@import "partials/templates/_global.scss";
+// @import "components/_buttons.scss";
+@import "templates/_global.scss";
 
 
 /*------------------------------------*\
@@ -52,7 +52,7 @@ body {
 \*------------------------------------*/
 
 
-@import "modules/_print-style.scss";
+@import "utils/_print-style.scss";
 @media print {
   html {
     font-size: 14px;
