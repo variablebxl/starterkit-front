@@ -38,6 +38,3 @@ components/          # Folder for component level styles
 pages/               # Folder for page-specific stylings and overrides
 
 ```
-
-## License
-This project is licensed under [GLWTPL](./LICENSE)
