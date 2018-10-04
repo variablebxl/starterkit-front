@@ -11,21 +11,9 @@ var autoprefixer  = require('gulp-autoprefixer');
 var cssmin        = require('gulp-cssmin');
 var shell         = require('gulp-shell');
 var concat        = require('gulp-concat');
-var gutil         = require('gulp-util');
 var uglify        = require('gulp-uglify-es').default;
 var babelify      = require('babelify');
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['front-sass'], function() {
-  browserSync.init({
-    proxy: "starterkit-front.test",
-    port: 8080,
-    open: false
-  });
-  gulp.watch("resources/assets/front/js/**/*.js", ['front-js-watch']);
-  gulp.watch("resources/assets/front/css/**/*.scss", ['front-sass']);
-  gulp.watch("resources/patternlab/**/*.mustache").on('change', browserSync.reload);
-});
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('front-sass', function() {
@@ -57,7 +45,7 @@ gulp.task('front-js', function () {
     entries: './resources/assets/front/js/scripts.js',
     debug: true
   })
-  .transform("babelify", { presets: ["es2015"] })
+  .transform("babelify", { presets: ["env"] })
   .bundle()
   .pipe(source('scripts.js'))
   .pipe(buffer())
@@ -74,10 +62,10 @@ gulp.task('front-js', function () {
 });
 
 // reloading browsers
-gulp.task('front-js-watch', ['front-js'], function (done) {
+gulp.task('front-js-watch', gulp.series('front-js', function (done) {
   browserSync.reload();
   done();
-});
+}));
 
 // Patternlab
 gulp.task('patternlab', shell.task([
@@ -85,5 +73,18 @@ gulp.task('patternlab', shell.task([
   'cd resources/patternlab && php core/console --watch --patternsonly'
 ]));
 
-gulp.task('front', ['serve']);
-gulp.task('frontlab', ['serve', 'patternlab']);
+// Static Server + watching scss/html files
+gulp.task('serve', gulp.series('front-sass', function() {
+  browserSync.init({
+    proxy: "starterkit-front.test",
+    port: 8080,
+    open: false
+  });
+  gulp.watch("resources/assets/front/js/**/*.js", gulp.series('front-js-watch'));
+  gulp.watch("resources/assets/front/css/**/*.scss", gulp.series('front-sass'));
+  // gulp.watch("resources/patternlab/**/*.mustache").on('change', browserSync.reload);
+  browserSync.watch('resources/patternlab/**/*.mustache').on('change', browserSync.reload);
+}));
+
+gulp.task('front', gulp.series('serve'));
+gulp.task('frontlab', gulp.parallel('serve', 'patternlab'));
