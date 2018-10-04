@@ -31,10 +31,11 @@ $ gulp frontlab
 
 ```
 
-screen.scss          # top level, @imports and @includes all other files
-_variables.scss      # file for setting global variables and settings
-utils/               # Folder for shared utility functions and mixins.
-components/          # Folder for component level styles
-pages/               # Folder for page-specific stylings and overrides
+resources/assets/front/css/screen.scss          # top level, @imports and @includes all other files
+resources/assets/front/css/_variables.scss      # file for setting global variables and settings
+resources/assets/front/css/utils/               # Folder for shared utility functions and mixins.
+resources/assets/front/css/components/          # Folder for component level styles
+resources/assets/front/css/templates/           # Folder for template-specific stylings and overrides
+resources/assets/front/css/external/            # Folder for external style sheets
 
 ```
