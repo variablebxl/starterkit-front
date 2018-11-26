@@ -82,8 +82,6 @@ gulp.task('serve', gulp.series('front-sass', function() {
   });
   gulp.watch("resources/assets/front/js/**/*.js", gulp.series('front-js-watch'));
   gulp.watch("resources/assets/front/css/**/*.scss", gulp.series('front-sass'));
-  // gulp.watch("resources/patternlab/**/*.mustache").on('change', browserSync.reload);
-  browserSync.watch('resources/patternlab/**/*.mustache').on('change', browserSync.reload);
 }));
 
 gulp.task('front', gulp.series('serve'));
