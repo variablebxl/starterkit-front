@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  #GLOBAL
+\*------------------------------------*/
+
+
+%container {
+  width: 100%;
+  padding-left: $grid-gutter-width/2;
+  padding-right: $grid-gutter-width/2;
+  @include media("<sm") {
+    padding-left: $grid-gutter-width/4;
+    padding-right: $grid-gutter-width/4;
+  }
+}
+
+%page-container {
+  @extend %container;
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
+}
+
+%content-max-width {
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}

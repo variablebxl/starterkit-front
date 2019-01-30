@@ -11,22 +11,26 @@
 @import "utils/_typography.scss";
 @import "utils/_medias.scss";
 @import "utils/_misc.scss";
-
-
-/*------------------------------------*\
-  #PARTIALS
-\*------------------------------------*/
-
-
-// @import "components/_buttons.scss";
-@import "templates/_global.scss";
+@import "utils/_global.scss";
 
 
 /*------------------------------------*\
   #EXTERNAL
 \*------------------------------------*/
 
-// @import "external/_vendor.scss";
+// @import "external/_flickity.scss";
+
+
+/*------------------------------------*\
+  #PARTIALS
+\*------------------------------------*/
+
+// components
+// @import "components/_header.scss";
+// templates
+// @import "templates/_index.scss";
+
+
 
 
 
@@ -34,6 +38,12 @@
   #BASE-STYLES
 \*------------------------------------*/
 
+html {
+  font-size: 18px;
+  @include media("<sm") {
+    font-size: 16px;
+  }
+}
 
 body {
   @extend %font-body;

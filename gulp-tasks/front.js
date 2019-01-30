@@ -45,7 +45,7 @@ gulp.task('front-js', function () {
     entries: './resources/assets/front/js/scripts.js',
     debug: true
   })
-  .transform("babelify", { presets: ["env"] })
+  .transform("babelify", { presets: ["@babel/preset-env"] })
   .bundle()
   .pipe(source('scripts.js'))
   .pipe(buffer())
@@ -76,7 +76,7 @@ gulp.task('patternlab', shell.task([
 // Static Server + watching scss/html files
 gulp.task('serve', gulp.series('front-sass', function() {
   browserSync.init({
-    proxy: "starterkit-front.test",
+    proxy: "starterkit.test",
     port: 8080,
     open: false
   });

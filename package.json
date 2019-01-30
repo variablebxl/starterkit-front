@@ -5,10 +5,10 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "babelify": "^10.0.0",
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",

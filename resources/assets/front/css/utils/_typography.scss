@@ -3,33 +3,30 @@
 \*------------------------------------*/
 
 .ts-title {
-  @extend %font-size-xxl;
-  @extend %font-body-bold;
-}
-.ts-subtitle {
-  @extend %font-size-xl;
-  @extend %font-body-bold;
-}
-.ts-subsubtitle {
   @extend %font-size-lg;
-  @extend %font-body-bold;
+  @extend %font-body;
 }
 .ts-body {
   @extend %font-size-md;
+  @extend %font-body;
 }
 .ts-small {
   @extend %font-size-sm;
-}
-.ts-xsmall {
-  @extend %font-size-xs;
+  @extend %font-body;
 }
 .ts-link {
-  color: $action;
-  border-bottom: $border-width-sm solid $action;
+  color: $base-color;
   text-decoration: none;
   &:hover {
-    color: $action-response;
-    border-color: $action-response;
+    color: $action;
+    text-decoration: none;
+  }
+}
+.ts-body-link {
+  color: $action;
+  text-decoration: none;
+  &:hover {
+    color: $action;
     text-decoration: none;
   }
 }
@@ -72,7 +69,7 @@
   @extend .ts-body !optional;
   p {
     @extend .ts-body !optional;
-    margin-bottom: .5em;
+    margin-bottom: $spacing-xxs;
   }
 }
 
