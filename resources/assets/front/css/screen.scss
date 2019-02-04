@@ -26,9 +26,14 @@
 \*------------------------------------*/
 
 // components
-// @import "components/_header.scss";
+@import "components/_header.scss";
+@import "components/_block-project.scss";
 // templates
-// @import "templates/_index.scss";
+@import "templates/_index.scss";
+@import "templates/_index-projects.scss";
+@import "templates/_detail.scss";
+@import "templates/_detail-project.scss";
+@import "templates/_page.scss";
 
 
 
