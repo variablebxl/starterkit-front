@@ -1,0 +1,25 @@
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  @extend %container;
+}
+.footer__inner {
+  width: calc(100% + #{$grid-gutter-width/2});
+  margin-left: -$grid-gutter-width/2;
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-md;
+  @include media('>=sm') {
+    display: flex;
+  }
+}
+.footer__section {
+  padding-left: $grid-gutter-width/2;
+  padding-right: $grid-gutter-width/2;
+  margin-bottom: $spacing-md;
+  width: 100%;
+  @include media('>=sm') {
+    width: calc(100%/3);
+  }
+}

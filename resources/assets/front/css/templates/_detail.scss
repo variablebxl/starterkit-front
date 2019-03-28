@@ -1,3 +1,50 @@
 /*------------------------------------*\
   #DETAIL
 \*------------------------------------*/
+
+
+.detail__inner {
+  @extend %container;
+}
+
+.text__inner {
+  max-width: $content-max-width;
+}
+
+.detail__title {
+  @extend .ts-title;
+  margin-bottom: $spacing-sm;
+}
+
+.detail__subtitle {
+  @extend .ts-subtitle;
+  margin-bottom: $spacing-sm;
+  .detail__title + & {
+    margin-top: -$spacing-sm;
+  }
+}
+
+.detail__title + .detail__intro {
+  margin-top: -$spacing-xs;
+}
+
+.detail__time {
+  @extend .ts-subtitle;
+  margin-bottom: $spacing-sm;
+  .detail__title + & {
+    margin-top: -$spacing-sm;
+  }
+}
+
+.detail__media {
+  @include media('<sm') {
+    margin-top: $spacing-lg;
+  }
+  .gallery__item + .gallery__item {
+    margin-top: $spacing-sm;
+  }
+}
+
+.detail__intro.body p {
+  @extend .ts-subtitle;
+}

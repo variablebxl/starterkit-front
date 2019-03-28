@@ -1,0 +1,17 @@
+/*------------------------------------*\
+  #BUTTON
+\*------------------------------------*/
+
+.button {
+  // reset
+  background: none;
+  border: none;
+  padding: 0;
+  // properties
+  display: inline-block;
+  @extend .ts-subtitle;
+  color: $base-color;
+  text-decoration: none;
+  padding-bottom: .3em;
+  border-bottom: $border-width-sm solid $base-color;
+}

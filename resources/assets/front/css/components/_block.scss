@@ -1,0 +1,37 @@
+/*------------------------------------*\
+  #BLOCK
+\*------------------------------------*/
+
+
+.block__link {
+  @extend .ts-link;
+}
+
+.block__title {
+  @extend .ts-subtitle;
+}
+.block__subtitle {
+  @extend .ts-body;
+}
+.block__excerpt {
+  @extend .ts-body;
+  .block__title + &,
+  .block__subtitle + & {
+    margin-top: $spacing-xs;
+  }
+}
+.block__time {
+  @extend .ts-body;
+  margin-bottom: $spacing-xs;
+}
+.block__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  .publication-date {
+    margin-bottom: $spacing-sm;
+  }
+}
+.publication-date {
+  @extend .ts-label;
+}

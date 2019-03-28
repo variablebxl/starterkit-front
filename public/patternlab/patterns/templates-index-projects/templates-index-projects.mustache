@@ -1,0 +1,24 @@
+<div class="wrapper wrapper--index">
+  {{> components-header }}
+  <main class="main" id="main">
+    <section class="index index--projects">
+      <h2 class="index__title">Projects</h2>
+      <div class="index__content">
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+      </div>
+      {{> components-pagination }}
+    </section>
+  </main>
+  {{> components-footer }}
+</div>

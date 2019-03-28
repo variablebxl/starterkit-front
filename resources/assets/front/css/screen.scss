@@ -27,13 +27,15 @@
 
 // components
 @import "components/_header.scss";
-@import "components/_block-project.scss";
+@import "components/_block.scss";
+@import "components/_button.scss";
+@import "components/_taxonomy.scss";
+@import "components/_footer.scss";
+@import "components/_form.scss";
+@import "components/_pagination.scss";
 // templates
 @import "templates/_index.scss";
-@import "templates/_index-projects.scss";
 @import "templates/_detail.scss";
-@import "templates/_detail-project.scss";
-@import "templates/_page.scss";
 
 
 

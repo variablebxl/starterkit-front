@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <link rel="stylesheet" href="../../../../assets/front/screen.css?1538660698">
+    <link rel="stylesheet" href="../../../../assets/front/screen.css?1553791187">
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     <!-- never cache patterns -->
@@ -16,76 +16,226 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1538660698" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1538660698" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1553791187" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1553791187" media="all" />
 
     <!-- End Pattern Lab -->
 
   </head>
   <body class="">
-<div class="homepage">
-  <header class="primary-header">
-    <div class="wrapper">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="../../patterns/templates-homepage/templates-homepage.html" class="nav__link">Homepage</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Article</a></li>
-        </ul>
-      </nav>
+<div class="wrapper wrapper--home">
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="logo">
+        <a href="../../patterns/templates-homepage/templates-homepage.html" class="logo__link"><img src="../../../assets/front/images/logo.svg" alt="Variable3000" class="logo__img"></a>
+      </h1>
+      <section class="menu">
+        <nav class="nav" id="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="../../patterns/templates-index-projects/templates-index-projects.html" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="nav__link">News</a></li>
+            <li class="nav__item"><a href="" class="nav__link">Information</a></li>
+          </ul>
+        </nav>
+        <section class="tools">
+          <nav class="nav nav--lang">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="../../patterns/templates-homepage/templates-homepage.html" class="nav__link is-active">en</a></li>
+              <li class="nav__item"><a href="../../patterns/templates-homepage/templates-homepage.html" class="nav__link">fr</a></li>
+            </ul>
+          </nav>
+        </section>
+      </section>
+      <div class="icon icon--menu"><span class="icon-text">Menu</span></div>
     </div>
   </header>
-  <main class="main wrapper" id="main">
-    <ul class="list">
-      <li class="list__item">
-        <a href="" class="list-item__link">
-          <h3 class="list-item__title">Article title</h3>
-          <img
-            data-sizes="auto"
-            src="https://dummyimage.com/800x530/969696/fff.jpg"
-            data-src="https://dummyimage.com/1200x800/969696/fff.jpg"
-            data-srcset="https://dummyimage.com/800x530/969696/fff.jpg 800w,
-            https://dummyimage.com/1200x800/969696/fff.jpg 1200w,
-            https://dummyimage.com/1600x1060/969696/fff.jpg 1600w"
-            alt="Image description"
-            class="image-lazy lazyload" />
-        </a>
-      </li>
-      <li class="list__item">
-        <a href="" class="list-item__link">
-          <h3 class="list-item__title">Article title</h3>
-          <img
-            data-sizes="auto"
-            src="https://dummyimage.com/800x800/969696/fff.jpg"
-            data-src="https://dummyimage.com/1200x1200/969696/fff.jpg"
-            data-srcset="https://dummyimage.com/800x800/969696/fff.jpg 800w,
-            https://dummyimage.com/1200x1200/969696/fff.jpg 1200w,
-            https://dummyimage.com/1600x1600/969696/fff.jpg 1600w"
-            alt="Image description"
-            class="image-lazy lazyload" />
-        </a>
-      </li>
-      <li class="list__item">
-        <a href="" class="list-item__link">
-          <h3 class="list-item__title">Article title</h3>
-          <img
-            data-sizes="auto"
-            src="https://dummyimage.com/533x800/969696/fff.jpg"
-            data-src="https://dummyimage.com/800x1200/969696/fff.jpg"
-            data-srcset="https://dummyimage.com/533x800/969696/fff.jpg 800w,
-            https://dummyimage.com/800x1200/969696/fff.jpg 1200w,
-            https://dummyimage.com/1060x1600/969696/fff.jpg 1600w"
-            alt="Image description"
-            class="image-lazy lazyload" />
-        </a>
-      </li>
-    </ul>
+  <main class="main" id="main">
+    <section class="index index--projects">
+      <h2 class="index__title">Featured projects</h2>
+      <div class="index__content">
+        <article class="block block--project">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-project/templates-detail-project.html" class="block__link">
+              <section class="block__media">
+                <img
+                  data-sizes="auto"
+                  data-src="https://dummyimage.com/533x800/969696/fff.jpg"
+                  data-srcset="https://dummyimage.com/533x800/969696/fff.jpg 800w,
+                  https://dummyimage.com/800x1200/969696/fff.jpg 1200w,
+                  https://dummyimage.com/1060x1600/969696/fff.jpg 1600w"
+                  alt="Image description"
+                  class="image-lazy lazyload" />
+              </section>
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+              </section>
+            </a>
+          </div>
+        </article>
+        <article class="block block--project">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-project/templates-detail-project.html" class="block__link">
+              <section class="block__media">
+                <img
+                  data-sizes="auto"
+                  data-src="https://dummyimage.com/800x530/969696/fff.jpg"
+                  data-srcset="https://dummyimage.com/800x530/969696/fff.jpg 800w,
+                  https://dummyimage.com/1200x800/969696/fff.jpg 1200w,
+                  https://dummyimage.com/1600x1060/969696/fff.jpg 1600w"
+                  alt="Image description"
+                  class="image-lazy lazyload" />
+              </section>
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+              </section>
+            </a>
+          </div>
+        </article>
+        <article class="block block--project">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-project/templates-detail-project.html" class="block__link">
+              <section class="block__media">
+                <img
+                  data-sizes="auto"
+                  data-src="https://dummyimage.com/800x530/969696/fff.jpg"
+                  data-srcset="https://dummyimage.com/800x530/969696/fff.jpg 800w,
+                  https://dummyimage.com/1200x800/969696/fff.jpg 1200w,
+                  https://dummyimage.com/1600x1060/969696/fff.jpg 1600w"
+                  alt="Image description"
+                  class="image-lazy lazyload" />
+              </section>
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+              </section>
+            </a>
+          </div>
+        </article>
+        <article class="block block--project">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-project/templates-detail-project.html" class="block__link">
+              <section class="block__media">
+                <img
+                  data-sizes="auto"
+                  data-src="https://dummyimage.com/533x800/969696/fff.jpg"
+                  data-srcset="https://dummyimage.com/533x800/969696/fff.jpg 800w,
+                  https://dummyimage.com/800x1200/969696/fff.jpg 1200w,
+                  https://dummyimage.com/1060x1600/969696/fff.jpg 1600w"
+                  alt="Image description"
+                  class="image-lazy lazyload" />
+              </section>
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+              </section>
+            </a>
+          </div>
+        </article>
+      </div>
+      <a href="../../patterns/templates-index-projects/templates-index-projects.html" class="button button--text">All projects</a>
+    </section>
+    <section class="index index--news">
+      <h2 class="index__title">Latest news</h2>
+      <div class="index__content">
+        <article class="block block--news">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-news/templates-detail-news.html" class="block__link">
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+                <p class="block__excerpt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales libero ut lectus accumsan, et condimentum risus imperdiet. Praesent at egestas neque.</p>
+              </section>
+            </a>
+            <section class="block__info">
+              <div class="taxonomy">
+                <ul class="taxonomy__list">
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag1</a></li>
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag2</a></li>
+                </ul>
+              </div>
+              <time class="publication-date" datetime="2019-09-28">28/09/2019</time>
+            </section>
+          </div>
+        </article>
+        <article class="block block--news">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-news/templates-detail-news.html" class="block__link">
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+                <p class="block__excerpt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales libero ut lectus accumsan, et condimentum risus imperdiet. Praesent at egestas neque.</p>
+              </section>
+            </a>
+            <section class="block__info">
+              <div class="taxonomy">
+                <ul class="taxonomy__list">
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag1</a></li>
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag2</a></li>
+                </ul>
+              </div>
+              <time class="publication-date" datetime="2019-09-28">28/09/2019</time>
+            </section>
+          </div>
+        </article>
+        <article class="block block--news">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-news/templates-detail-news.html" class="block__link">
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+                <p class="block__excerpt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales libero ut lectus accumsan, et condimentum risus imperdiet. Praesent at egestas neque.</p>
+              </section>
+            </a>
+            <section class="block__info">
+              <div class="taxonomy">
+                <ul class="taxonomy__list">
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag1</a></li>
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag2</a></li>
+                </ul>
+              </div>
+              <time class="publication-date" datetime="2019-09-28">28/09/2019</time>
+            </section>
+          </div>
+        </article>
+        <article class="block block--news">
+          <div class="block__inner">
+            <a href="../../patterns/templates-detail-news/templates-detail-news.html" class="block__link">
+              <section class="block__text">
+                <h2 class="block__title">Project title</h2>
+                <p class="block__excerpt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales libero ut lectus accumsan, et condimentum risus imperdiet. Praesent at egestas neque.</p>
+              </section>
+            </a>
+            <section class="block__info">
+              <div class="taxonomy">
+                <ul class="taxonomy__list">
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag1</a></li>
+                  <li class="taxonomy__item"><a href="../../patterns/templates-index-news/templates-index-news.html" class="taxonomy__link">tag2</a></li>
+                </ul>
+              </div>
+              <time class="publication-date" datetime="2019-09-28">28/09/2019</time>
+            </section>
+          </div>
+        </article>
+      </div>
+      <a href="../../patterns/templates-index-news/templates-index-news.html" class="button button--text">All news</a>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <section class="footer__section">
+        <h1 class="logo">
+          <a href="../../patterns/templates-homepage/templates-homepage.html" class="logo__link"><img src="../../../assets/front/images/logo.svg" alt="Project title" class="logo__img"></a>
+        </h1>
+      </section>
+      <section class="footer__section">
+        <div class="body">
+          <p>Website description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a urna ac lacus ornare venenatis vel nec velit. Proin congue tincidunt ipsum, ac vestibulum ante varius quis. Praesent ullamcorper, arcu quis porta consectetur, dolor enim dignissim nisl, vitae congue justo leo semper eros.</p>
+          <p>Website by <a href="http://www.variable.club/" target="_blank">Variable.club</a></p>
+        </div>
+      </section>
+    </div>
+  </header>
 </div>
   <script defer type="text/javascript" src="../../../../assets/front/scripts.js"></script>
 
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
-  {"cssEnabled":false,"lineage":[{"lineagePattern":"components-header","lineagePath":"..\/..\/patterns\/templates-homepage\/templates-homepage.html"},{"lineagePattern":"components-list-item","lineagePath":"..\/..\/patterns\/templates-homepage\/templates-homepage.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"templates"},"patternDesc":"","patternExtension":"mustache","patternName":"homepage","patternPartial":"templates-homepage","patternState":"","extraOutput":[]}
+  {"cssEnabled":false,"lineage":[{"lineagePattern":"components-header","lineagePath":"..\/..\/patterns\/templates-homepage\/templates-homepage.html"},{"lineagePattern":"components-block-project","lineagePath":"..\/..\/patterns\/templates-homepage\/templates-homepage.html"},{"lineagePattern":"components-block-news","lineagePath":"..\/..\/patterns\/templates-homepage\/templates-homepage.html"},{"lineagePattern":"components-footer","lineagePath":"..\/..\/patterns\/templates-homepage\/templates-homepage.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"templates"},"patternDesc":"","patternExtension":"mustache","patternName":"homepage","patternPartial":"templates-homepage","patternState":"","extraOutput":[]}
 </script>
 
 <script>
@@ -121,10 +271,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1538660698">
+<script id="pl-js-polyfill-insert-1553791187">
   (function() {
     if (self != top) {
-      var cb = '1538660698';
+      var cb = '1553791187';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -134,10 +284,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1538660698">
+<script id="pl-js-insert-1553791187">
   (function() {
     if (self != top) {
-      var cb = '1538660698';
+      var cb = '1553791187';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }

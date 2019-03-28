@@ -1,3 +1,50 @@
 /*------------------------------------*\
   #HEADER
 \*------------------------------------*/
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: $body-color;
+  padding: $spacing-sm 0;
+}
+
+.header__inner {
+  @extend %container;
+  position: relative;
+}
+
+.nav__link {
+  @extend .ts-body;
+  @extend .ts-link;
+}
+
+.nav--lang .nav__link:not(.is-active) {
+  color: $gray;
+  &:hover {
+    color: $base-color;
+  }
+}
+
+.icon--menu {
+  position: absolute;
+  top: 15px;
+  right: 5%;
+  background: url('../../assets/front/images/icon-menu.svg') center center no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  cursor: pointer;
+  @include media(">=sm") {
+    display: none;
+  }
+}
+
+// header mobile
+@include media("<sm") {
+  .menu {
+    display: none;
+  }
+}

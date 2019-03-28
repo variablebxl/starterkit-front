@@ -1,10 +1,26 @@
-<div class="homepage">
+<div class="wrapper wrapper--home">
   {{> components-header }}
-  <main class="main wrapper" id="main">
-    <ul class="list">
-      {{> components-list-item(image-type:"landscape") }}
-      {{> components-list-item(image-type:"square") }}
-      {{> components-list-item(image-type:"portrait") }}
-    </ul>
+  <main class="main" id="main">
+    <section class="index index--projects">
+      <h2 class="index__title">Featured projects</h2>
+      <div class="index__content">
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"landscape" }}
+        {{> components-block-project(title: "Project title", image-type:"portrait" }}
+      </div>
+      <a href="{{ link.templates-index-projects }}" class="button button--text">All projects</a>
+    </section>
+    <section class="index index--news">
+      <h2 class="index__title">Latest news</h2>
+      <div class="index__content">
+        {{> components-block-news(title: "Project title", image-type:"portrait" }}
+        {{> components-block-news(title: "Project title", image-type:"landscape" }}
+        {{> components-block-news(title: "Project title", image-type:"landscape" }}
+        {{> components-block-news(title: "Project title", image-type:"portrait" }}
+      </div>
+      <a href="{{ link.templates-index-news }}" class="button button--text">All news</a>
+    </section>
   </main>
+  {{> components-footer }}
 </div>

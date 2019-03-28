@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  #PAGINATION
+\*------------------------------------*/
+
+.pagination {
+  width: 100%;
+  margin-top: $spacing-md;
+  @include media(">=sm") {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.pagination__link {
+  @extend .button;
+  display: block !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: $spacing-xs;
+}

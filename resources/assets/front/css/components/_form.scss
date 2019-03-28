@@ -1,0 +1,46 @@
+/*------------------------------------*\
+  #FORM
+\*------------------------------------*/
+
+
+.form {
+  label {
+    @extend .ts-body;
+    display: block;
+    margin-bottom: $spacing-xs;
+  }
+  .input-group {
+    position: relative;
+    border: $border-width-sm solid $gray;
+    width: $content-max-width;
+    max-width: 100%;
+    input,
+    button {
+      border: none;
+      height: 45px;
+    }
+    input {
+      @extend .ts-body;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: $spacing-xs $spacing-xs;
+    }
+    button{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      font-size: 0;
+      width: 40px;
+      background: url('images/icon-check.svg') no-repeat center center;
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+  .no-touchevents .form button:hover {
+    opacity: .5;
+  }

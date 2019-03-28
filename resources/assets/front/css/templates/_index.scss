@@ -1,3 +1,54 @@
 /*------------------------------------*\
   #INDEX
 \*------------------------------------*/
+
+.index {
+  @extend %container;
+  padding-top: $spacing-xxl;
+  padding-bottom: $spacing-xl;
+  border-bottom: $border-width-md solid $base-color;
+}
+
+.index__title {
+  @extend .ts-title;
+}
+
+.index__title + .index__content {
+  margin-top: $spacing-xl;
+}
+
+.index .button {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $spacing-xs;
+}
+
+.index__content {
+  width: calc(100% + #{$grid-gutter-width});
+  margin-left: -$grid-gutter-width/2;
+  display: flex;
+  flex-wrap: wrap;
+  .block {
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+    margin-bottom: $spacing-md;
+    width: 100%;
+  }
+}
+
+.index--projects {
+  .block {
+    @include media('>=sm') {
+      width: calc(100%/2);
+    }
+  }
+}
+
+.index--news {
+  .block {
+    @include media('>=sm') {
+      width: calc(100%/3);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  #TAXONOMY
+\*------------------------------------*/
+
+.taxonomy {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.taxonomy__item {
+  margin-right: $spacing-xs;
+  margin-bottom: $spacing-xs;
+}
+.taxonomy__link {
+  display: block;
+  background-color: $base-color;
+  color: $white;
+  text-decoration: none;
+  @extend .ts-label;
+  padding: .2em .5em;
+  border-radius: 3px;
+  border: $border-width-sm solid transparent;
+  &:hover {
+    background-color: $body-color !important;
+    color: $base-color;
+    border-color: $gray;
+  }
+}

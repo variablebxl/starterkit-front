@@ -3,8 +3,12 @@
 \*------------------------------------*/
 
 .ts-title {
+  @extend %font-size-xl;
+  @extend %font-body-bold;
+}
+.ts-subtitle {
   @extend %font-size-lg;
-  @extend %font-body;
+  @extend %font-body-bold;
 }
 .ts-body {
   @extend %font-size-md;
@@ -14,22 +18,29 @@
   @extend %font-size-sm;
   @extend %font-body;
 }
+.ts-label {
+  @extend %font-size-sm;
+  @extend %font-body;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
 .ts-link {
   color: $base-color;
   text-decoration: none;
   &:hover {
-    color: $action;
+    color: rgba($base-color, .6);
     text-decoration: none;
   }
 }
 .ts-body-link {
   color: $action;
-  text-decoration: none;
+  text-decoration: underline;
   &:hover {
     color: $action;
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
+
 
 /*------------------------------------*\
   #TITLE
@@ -69,7 +80,7 @@
   @extend .ts-body !optional;
   p {
     @extend .ts-body !optional;
-    margin-bottom: $spacing-xxs;
+    margin-bottom: .8em;
   }
 }
 
@@ -80,12 +91,7 @@
 \*------------------------------------*/
 
 .body a {
-  color: $action;
-  text-decoration: none;
-  &:hover {
-    color: $action-response;
-    text-decoration: underline;
-  }
+  @extend .ts-body-link;
 }
 
 
