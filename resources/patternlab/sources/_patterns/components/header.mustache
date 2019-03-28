@@ -1,11 +1,25 @@
 <header class="header">
-  <h1 class="logo">
-    <a href="{{ link.templates-projects }}" class="logo__link"><img src="../../../assets/front/images/logo.svg" alt="Project title" class="logo__img"></a>
-  </h1>
-  <nav class="nav" id="nav">
-    <ul class="nav__list">
-      <li class="nav__item"><a href="{{ link.templates-projects }}" class="nav__link">projects</a></li>
-      <li class="nav__item"><a href="{{ link.templates-page }}" class="nav__link">information</a></li>
-    </ul>
-  </nav>
+  <div class="header__inner">
+    <h1 class="logo">
+      <a href="{{ link.templates-homepage }}" class="logo__link"><img src="../../../assets/front/images/logo.svg" alt="Variable3000" class="logo__img"></a>
+    </h1>
+    <section class="menu">
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="{{ link.templates-index-projects }}" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="{{ link.templates-index-news }}" class="nav__link">News</a></li>
+          <li class="nav__item"><a href="{{ link.templates-page }}" class="nav__link">Information</a></li>
+        </ul>
+      </nav>
+      <section class="tools">
+        <nav class="nav nav--lang">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="{{ link.templates-homepage }}" class="nav__link is-active">en</a></li>
+            <li class="nav__item"><a href="{{ link.templates-homepage }}" class="nav__link">fr</a></li>
+          </ul>
+        </nav>
+      </section>
+    </section>
+    <div class="icon icon--menu"><span class="icon-text">Menu</span></div>
+  </div>
 </header>

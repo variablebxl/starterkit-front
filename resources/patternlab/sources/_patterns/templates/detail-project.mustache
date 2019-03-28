@@ -1,10 +1,10 @@
-<div class="wrapper wrapper--project">
+<div class="wrapper wrapper--detail">
   {{> components-header }}
   <main class="main" id="main">
     <article class="detail detail--project">
       <div class="detail__inner">
         <section class="detail__text">
-          <h1 class="detail__title">Title</h1>
+          <h1 class="detail__title">Project title</h1>
           <div class="detail__intro body">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis illum cupiditate, nisi similique possimus veritatis eum quas qui asperiores vel quo quasi, unde consequuntur aperiam. Distinctio quisquam veritatis placeat, earum?</p>
           </div>
@@ -13,13 +13,15 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, itaque reiciendis culpa temporibus dignissimos atque facilis distinctio. Itaque id aut placeat architecto quod labore quos fugiat unde porro, odit nesciunt.</p>
           </div>
         </section>
-        <section class="detail__media gallery">
+        <section class="detail__media gallery gallery--slideshow">
+          <figure class="gallery__item">{{> utils-image-landscape }}</figure>
           <figure class="gallery__item">{{> utils-image-landscape }}</figure>
           <figure class="gallery__item">{{> utils-image-portrait }}</figure>
-          <figure class="gallery__item">{{> utils-image-square }}</figure>
-          <figure class="gallery__item">{{> utils-image-portrait }}</figure>
+          <figure class="gallery__item">{{> utils-image-landscape }}</figure>
         </section>
       </div>
+      {{> components-pagination }}
     </article>
   </main>
+  {{> components-footer }}
 </div>

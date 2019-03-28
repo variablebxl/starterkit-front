@@ -1,13 +1,12 @@
 <article class="block block--project">
-  <a href="{{ link.templates-project }}" class="block__link">
-    <section class="block__media">
-      {{> utils-image-{{ image-type }} }}
-    </section>
-    <section class="block__text">
-      <h2 class="block__title">{{ title }}</h2>
-      <div class="block__content body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis illum cupiditate, nisi similique possimus veritatis eum quas qui asperiores vel quo quasi, unde consequuntur aperiam. Distinctio quisquam veritatis placeat, earum?</p>
-      </div>
-    </section>
-  </a>
+  <div class="block__inner">
+    <a href="{{ link.templates-detail-project }}" class="block__link">
+      <section class="block__media">
+        {{> utils-image-{{ image-type }} }}
+      </section>
+      <section class="block__text">
+        <h2 class="block__title">{{ title }}</h2>
+      </section>
+    </a>
+  </div>
 </article>
