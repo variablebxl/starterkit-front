@@ -15,21 +15,56 @@
   position: relative;
 }
 
+.menu {
+  @include media('>=sm') {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  @include media('<sm') {
+    margin-top: $spacing-sm;
+    border-bottom: $border-width-sm solid $base-color;
+  }
+}
+
+.nav__item {
+  @include media('>=sm') {
+    display: inline-block;
+    .nav:not(.nav--lang) &:not(:last-child) {
+      margin-right: $spacing-sm;
+    }
+  }
+  @include media('<sm') {
+    border-top: $border-width-sm solid $base-color;
+  }
+}
+
+.logo__link,
 .nav__link {
+  display: block;
   @extend .ts-body;
   @extend .ts-link;
 }
 
-.nav--lang .nav__link:not(.is-active) {
-  color: $gray;
-  &:hover {
-    color: $base-color;
+.nav__link {
+  @include media('<sm') {
+    padding: $spacing-xxs 0;
+  }
+}
+
+.nav--lang .nav__link {
+  @extend .ts-label;
+  &:not(.is-active) {
+    color: $gray;
+    &:hover {
+      color: $base-color;
+    }
   }
 }
 
 .icon--menu {
   position: absolute;
-  top: 15px;
+  top: 0;
   right: 5%;
   background: url('../../assets/front/images/icon-menu.svg') center center no-repeat;
   display: block;
@@ -38,6 +73,9 @@
   background-size: 100%;
   cursor: pointer;
   @include media(">=sm") {
+    display: none;
+  }
+  .icon__text {
     display: none;
   }
 }

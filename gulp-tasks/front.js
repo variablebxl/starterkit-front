@@ -76,8 +76,8 @@ gulp.task('patternlab', shell.task([
 // Static Server + watching scss/html files
 gulp.task('serve', gulp.series('front-sass', function() {
   browserSync.init({
-    proxy: "starterkit.test",
-    port: 8080,
+    proxy: "starterkit-front.test",
+    port: 8081,
     open: false
   });
   gulp.watch("resources/assets/front/js/**/*.js", gulp.series('front-js-watch'));

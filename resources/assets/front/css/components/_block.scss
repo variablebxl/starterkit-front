@@ -6,7 +6,9 @@
 .block__link {
   @extend .ts-link;
 }
-
+.block__media + .block__text {
+  margin-top: $spacing-xs;
+}
 .block__title {
   @extend .ts-subtitle;
 }
