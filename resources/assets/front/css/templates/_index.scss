@@ -4,7 +4,6 @@
 
 .index {
   @extend %container;
-  border-bottom: $border-width-md solid $base-color;
 }
 
 .index__title {

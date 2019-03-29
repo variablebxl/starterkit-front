@@ -14,6 +14,10 @@
 .detail__title {
   @extend .ts-title;
   margin-bottom: $spacing-sm;
+  & + .publication-date {
+    margin-top: -$spacing-xs;
+    margin-bottom: $spacing-sm;
+  }
 }
 
 .detail__subtitle {
@@ -36,12 +40,10 @@
   }
 }
 
-.detail__media {
+.detail .gallery {
+  margin-top: $spacing-lg;
   @include media('<sm') {
     margin-top: $spacing-lg;
-  }
-  .gallery__item + .gallery__item {
-    margin-top: $spacing-sm;
   }
 }
 

@@ -7,9 +7,13 @@
   display: flex;
   flex-wrap: wrap;
 }
+.taxonomy__list {
+  list-style: none;
+}
 .taxonomy__item {
-  margin-right: $spacing-xs;
+  margin-right: $spacing-xxs;
   margin-bottom: $spacing-xs;
+  display: inline-block;
 }
 .taxonomy__link {
   display: block;

@@ -18,7 +18,7 @@
   #EXTERNAL
 \*------------------------------------*/
 
-// @import "external/_flickity.scss";
+@import "external/_flickity.scss";
 
 
 /*------------------------------------*\
@@ -30,6 +30,7 @@
 @import "components/_block.scss";
 @import "components/_button.scss";
 @import "components/_taxonomy.scss";
+@import "components/_gallery.scss";
 @import "components/_footer.scss";
 @import "components/_form.scss";
 @import "components/_pagination.scss";

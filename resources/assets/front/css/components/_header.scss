@@ -17,13 +17,12 @@
 
 .menu {
   @include media('>=sm') {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: baseline;
   }
   @include media('<sm') {
     margin-top: $spacing-sm;
-    border-bottom: $border-width-sm solid $base-color;
   }
 }
 
@@ -33,9 +32,6 @@
     .nav:not(.nav--lang) &:not(:last-child) {
       margin-right: $spacing-sm;
     }
-  }
-  @include media('<sm') {
-    border-top: $border-width-sm solid $base-color;
   }
 }
 

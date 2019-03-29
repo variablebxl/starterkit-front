@@ -18,7 +18,8 @@
 .block__excerpt {
   @extend .ts-body;
   .block__title + &,
-  .block__subtitle + & {
+  .block__subtitle + &,
+  .publication-date + & {
     margin-top: $spacing-xs;
   }
 }
@@ -27,13 +28,12 @@
   margin-bottom: $spacing-xs;
 }
 .block__info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  .publication-date {
-    margin-bottom: $spacing-sm;
-  }
+  margin-top: $spacing-xs;
 }
 .publication-date {
   @extend .ts-label;
+  display: block;
+  .block__title + & {
+    margin-top: $spacing-xxs;
+  }
 }
