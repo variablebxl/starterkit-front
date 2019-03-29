@@ -38,21 +38,22 @@ $grid-gutter-width: 30px !default;
 \*------------------------------------*/
 
 %font-body {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+
 %font-body-italic {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-style: italic;
 }
 
 %font-body-bold {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
 
 %font-body-bold-italic {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-style: italic;
   font-weight: 700;
 }
