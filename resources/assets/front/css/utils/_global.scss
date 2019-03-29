@@ -32,9 +32,5 @@
 .detail {
   padding-top: $spacing-lg;
   padding-bottom: $spacing-lg;
-  border-top: $border-width-sm solid $base-color;
-}
-
-.footer {
-  border-top: $border-width-sm solid $base-color;
+  border-bottom: $border-width-sm solid $base-color;
 }

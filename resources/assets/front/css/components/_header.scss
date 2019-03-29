@@ -8,6 +8,7 @@
   z-index: 2;
   background-color: $body-color;
   padding: $spacing-sm 0;
+  border-bottom: $border-width-sm solid $base-color;
 }
 
 .header__inner {
@@ -23,38 +24,6 @@
   }
   @include media('<sm') {
     margin-top: $spacing-sm;
-  }
-}
-
-.nav__item {
-  @include media('>=sm') {
-    display: inline-block;
-    .nav:not(.nav--lang) &:not(:last-child) {
-      margin-right: $spacing-sm;
-    }
-  }
-}
-
-.logo__link,
-.nav__link {
-  display: block;
-  @extend .ts-body;
-  @extend .ts-link;
-}
-
-.nav__link {
-  @include media('<sm') {
-    padding: $spacing-xxs 0;
-  }
-}
-
-.nav--lang .nav__link {
-  @extend .ts-label;
-  &:not(.is-active) {
-    color: $gray;
-    &:hover {
-      color: $base-color;
-    }
   }
 }
 

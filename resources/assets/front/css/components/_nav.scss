@@ -1,0 +1,67 @@
+/*------------------------------------*\
+  #NAV
+\*------------------------------------*/
+
+.nav__item {
+  @include media('>=sm') {
+    display: inline-block;
+    .nav:not(.nav--lang) &:not(:last-child) {
+      margin-right: $spacing-sm;
+    }
+  }
+}
+
+.logo__link,
+.nav__link {
+  display: block;
+  @extend .ts-body;
+  @extend .ts-link;
+}
+
+.nav__link {
+  @include media('<sm') {
+    padding: $spacing-xxs 0;
+  }
+}
+
+// lang
+
+.nav--lang .nav__link {
+  @extend .ts-label;
+  &:not(.is-active) {
+    color: $gray;
+    &:hover {
+      color: $base-color;
+    }
+  }
+}
+
+// subnav
+.nav--subnav {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: $body-color;
+  border-bottom: $border-width-sm solid $base-color;
+  .nav__list {
+    @extend %container;
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+  }
+}
+.nav--subnav .nav__link.active {
+  @extend %font-body-bold;
+}
+
+.nav--subnav .nav__list {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  .nav__item {
+    padding-right: $spacing-sm;
+  }
+  .nav__item {
+    flex-shrink: 0;
+  }
+}
