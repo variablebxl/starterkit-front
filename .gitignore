@@ -5,7 +5,7 @@ public/storage
 public/medias
 storage/*.key
 storage/debugbar
-storage/framework/cache/
+storage/framework/cache/*
 .idea
 .vagrant
 Homestead.json
