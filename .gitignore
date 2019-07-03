@@ -5,7 +5,11 @@ public/storage
 public/medias
 storage/*.key
 storage/debugbar
-storage/framework/cache/*
+storage/framework/cache/
+storage/framework/sessions/*
+storage/logs/laravel.log
+storage/framework/views/*
+storage/app/public/medias
 .idea
 .vagrant
 Homestead.json
