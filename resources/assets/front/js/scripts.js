@@ -10,5 +10,4 @@ $( document ).ready(function() {
   require('./modules/_is-touched.js');
   require('./modules/_position.js');
   require('./modules/_menu.js');
-  require('./modules/_slideshow.js');
 });

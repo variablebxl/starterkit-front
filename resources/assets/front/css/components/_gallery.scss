@@ -1,8 +1,7 @@
 /*------------------------------------*\
-  #GALLERY
+  gallery
 \*------------------------------------*/
 
-// basic
 .gallery--basic {
   img {
     width: auto;
@@ -13,56 +12,5 @@
   }
   .gallery__item + .gallery__item {
     margin-top: $spacing-sm;
-  }
-}
-
-// slideshow
-
-.flickity-viewport {
-  @include aspect-ratio(16,9);
-}
-
-.flickity-slider,
-.gallery--slideshow .gallery__item {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.gallery--slideshow .gallery__item {
-  background-repeat: no-repeat;
-  background-position: center;
-  &.cover {
-    background-size: cover;
-  }
-  &.contain {
-    background-size: contain;
-  }
-  img {
-    display: none;
-  }
-}
-
-.gallery--slideshow .gallery__desc {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: $body-color;
-  @extend .ts-body;
-  padding: $spacing-xs;
-}
-
-.flickity-button {
-  background-color: $body-color;
-  &:hover {
-    background-color: $action;
-  }
-  .flickity-button-icon {
-    color: $base-color;
-    width: 40%;
-    height: 40%;
-    left: 30%;
-    top: 30%;
   }
 }

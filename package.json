@@ -26,8 +26,5 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "dependencies": {
-    "flickity": "^2.2.0",
-    "flickity-imagesloaded": "^2.0.0"
-  }
+  "dependencies": {}
 }

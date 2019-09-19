@@ -1,5 +1,6 @@
-// Global reset
-// -----------------------------------------------------------
+/*------------------------------------*\
+  reset
+\*------------------------------------*/
 
 *, *:before, *:after { box-sizing: border-box;}
 
@@ -10,10 +11,6 @@ q, blockquote { quotes: none; }
 q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
 a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
-
-
-// Forms. If no forms, remove these bad boys
-// -----------------------------------------------------------
 
 button, input { line-height: normal; }
 button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }

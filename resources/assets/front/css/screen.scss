@@ -2,7 +2,7 @@
   #MODULES
 \*------------------------------------*/
 
-@import "utils/_include-media.scss";
+@import "external/_include-media.scss";
 @import "_variables.scss";
 
 @import "utils/_reset.scss";
@@ -18,7 +18,7 @@
   #EXTERNAL
 \*------------------------------------*/
 
-@import "external/_flickity.scss";
+// @import "external/_include-media.scss";
 
 
 /*------------------------------------*\

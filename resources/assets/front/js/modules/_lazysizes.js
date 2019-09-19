@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  #LAZYSIZES
+  lazysizes
 \*------------------------------------*/
 
 var attachlazysizes = require('lazysizes');
